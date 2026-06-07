@@ -1,0 +1,1863 @@
+Enter password: *************
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 17
+Server version: 8.0.44 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| class11            |
+| college_db         |
+| employee           |
+| excel_data         |
+| information_schema |
+| mysql              |
+| office             |
+| performance_schema |
+| rapido             |
+| sakila             |
+| spotify_db         |
+| sys                |
+| world              |
+| zomato             |
++--------------------+
+14 rows in set (0.00 sec)
+
+mysql> use excel_data;
+Database changed
+mysql> show tables;
++----------------------+
+| Tables_in_excel_data |
++----------------------+
+| student_budget       |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from student_budget;
++------------+----------------+---------------------+------------------------------+---------+----------------+--------------+-----------+
+| Date       | Category       | Subcategory         | Description                  | Amount  | Payment_Method | Expense_Type | Month     |
++------------+----------------+---------------------+------------------------------+---------+----------------+--------------+-----------+
+| 21-01-2024 | Shopping       | Personal Care       | Nykaa skincare order         | 1097.90 | UPI            | Need      |  | January
+| 04-01-2024 | Miscellaneous  | Travel              | Train ticket  home           | 3888.11 | UPI            | Want      |  | January
+| 01-01-2024 | Transportation | Fuel                | Fuel refill  bike            |  104.41 | Cash           | Need      |  | January
+| 24-01-2024 | Food           | Meal Prep           | Protein powder top-up        |  406.23 | UPI            | Need      |  | January
+| 09-01-2024 | Healthcare     | Mental Health       | Counselling session          |  162.95 | UPI            | Need      |  | January
+| 08-01-2024 | Transportation | Vehicle Maintenance | Bike service  TVS            |  587.12 | Debit Card     | Need      |  | January
+| 08-01-2024 | Education      | Books & Stationery  | Printer paper                | 2843.20 | Credit Card    | Need      |  | January
+| 05-01-2024 | Shopping       | Gifts               | Farewell gift pooling        | 3378.83 | UPI            | Want      |  | January
+| 24-01-2024 | Shopping       | Home Essentials     | Extension cord               | 1589.54 | Cash           | Need      |  | January
+| 04-01-2024 | Transportation | Ride Share          | Rapido bike ride             |   52.46 | Cash           | Want      |  | January
+| 22-01-2024 | Entertainment  | Hobbies             | Cricket bat purchase         |   60.43 | Credit Card    | Want      |  | January
+| 24-01-2024 | Entertainment  | Movies              | PVR Cinemas  Avengers        | 1296.47 | Credit Card    | Want      |  | January
+| 29-01-2024 | Entertainment  | Subscriptions       | Disney+ Hotstar              |  360.64 | UPI            | Want      |  | January
+| 18-01-2024 | Miscellaneous  | Donations           | Friend crowdfund             | 3233.84 | UPI            | Want      |  | January
+| 03-01-2024 | Transportation | Public Transport    | MTC season ticket            |  222.26 | UPI            | Need      |  | January
+| 19-01-2024 | Miscellaneous  | Travel              | Weekend trip  Pondicherry    |  261.24 | Credit Card    | Want      |  | January
+| 14-01-2024 | Transportation | Ride Share          | Rapido bike ride             |  126.27 | UPI            | Want      |  | January
+| 02-01-2024 | Education      | Exam Fees           | Gate exam form               |  871.71 | Credit Card    | Need      |  | January
+| 01-01-2024 | Transportation | Vehicle Maintenance | Bike service  TVS            |   44.59 | Debit Card     | Need      |  | January
+| 03-01-2024 | Food           | Groceries           | Big Basket order             |  158.06 | Debit Card     | Need      |  | January
+| 07-01-2024 | Miscellaneous  | Donations           | Friend crowdfund             | 3611.72 | UPI            | Want      |  | January
+| 08-01-2024 | Bills          | Mobile Recharge     | Airtel postpaid bill         | 1738.18 | Debit Card     | Need      |  | January
+| 17-01-2024 | Shopping       | Home Essentials     | Bedsheet  Pepperfry          |  626.31 | Debit Card     | Need      |  | January
+| 20-01-2024 | Entertainment  | Movies              | PVR Cinemas Avengers         | 1134.56 | Credit Card    | Want      |  | January
+| 01-01-2024 | Food           | Meal Prep           | Dabba from mess              |  417.19 | Cash           | Need      |  | January
+| 18-01-2024 | Food           | Meal Prep           | Tiffin service  monthly      |  685.53 | UPI            | Need      |  | January
+| 07-01-2024 | Transportation | Ride Share          | Auto fare  hospital          |   85.13 | Debit Card     | Want      |  | January
+| 23-01-2024 | Entertainment  | Hobbies             | Badminton court booking      |  948.10 | Cash           | Want      |  | January
+| 21-01-2024 | Healthcare     | Mental Health       | Counselling session          | 1355.97 | Credit Card    | Need      |  | January
+| 23-01-2024 | Entertainment  | Subscriptions       | Disney+ Hotstar              |  239.77 | Debit Card     | Want      |  | January
+| 18-01-2024 | Miscellaneous  | Emergency Fund      | Unexpected repair            |   57.08 | Cash           | Need      |  | January
+| 14-01-2024 | Transportation | Parking             | College parking  month       |  310.94 | Cash           | Need      |  | January
+| 08-01-2024 | Healthcare     | Doctor Visits       | General physician visit      |  770.58 | Cash           | Need      |  | January
+| 15-02-2024 | Miscellaneous  | Miscellaneous       | Vending machine              | 2454.48 | Cash           | Want     |   | February
+| 19-02-2024 | Shopping       | Clothing            | H&M T-shirts                 |  999.18 | Credit Card    | Want     |   | February
+| 09-02-2024 | Education      | Online Courses      | NPTEL exam fee               | 1834.25 | UPI            | Need     |   | February
+| 26-02-2024 | Entertainment  | Subscriptions       | JioSaavn                     |  758.37 | Credit Card    | Want     |   | February
+| 28-02-2024 | Transportation | Vehicle Maintenance | Oil change                   |   40.79 | UPI            | Need     |   | February
+| 01-02-2024 | Education      | Online Courses      | Udemy course Python          | 2236.63 | Debit Card     | Need     |   | February
+| 25-02-2024 | Food           | Groceries           | Reliance Smart Bazaar        |  757.69 | Cash           | Need     |   | February
+| 26-02-2024 | Food           | Snacks              | Murukku packet               |  455.44 | Debit Card     | Need     |   | February
+| 06-02-2024 | Education      | Tuition Fees        | Lab fee payment              | 1125.72 | Net Banking    | Need     |   | February
+| 23-02-2024 | Healthcare     | Medicines           | Vitamin D supplements        | 1350.52 | Credit Card    | Need     |   | February
+| 14-02-2024 | Bills          | Subscriptions       | Notion Pro plan              | 1096.41 | Net Banking    | Need     |   | February
+| 11-02-2024 | Education      | Books & Stationery  | Printer paper                |  123.12 | UPI            | Need     |   | February
+| 09-02-2024 | Bills          | Internet            | BSNL broadband               | 1123.35 | UPI            | Need     |   | February
+| 05-02-2024 | Bills          | Mobile Recharge     | Airtel postpaid bill         | 1490.12 | Debit Card     | Need     |   | February
+| 07-02-2024 | Healthcare     | Mental Health       | Counselling session          |  484.70 | Cash           | Need     |   | February
+| 25-02-2024 | Bills          | Electricity         | Electricity PG room          | 5213.25 | Auto-debit     | Need     |   | February
+| 11-02-2024 | Healthcare     | Insurance           | Two-wheeler insurance        | 1375.06 | Credit Card    | Need     |   | February
+| 04-02-2024 | Food           | Groceries           | Nilgiris dairy run           |  167.50 | Credit Card    | Need     |   | February
+| 03-02-2024 | Food           | Groceries           | Spencer's weekly shop        |  364.61 | Credit Card    | Need     |   | February
+| 13-02-2024 | Bills          | Subscriptions       | Notion Pro plan              |  870.75 | Net Banking    | Need     |   | February
+| 04-02-2024 | Shopping       | Clothing            | College fest outfit          |  105.75 | UPI            | Want     |   | February
+| 12-02-2024 | Healthcare     | Gym & Fitness       | Cult.fit monthly pass        | 1900.31 | Credit Card    | Want     |   | February
+| 28-02-2024 | Healthcare     | Doctor Visits       | Dentist check-up             | 1038.89 | Net Banking    | Need     |   | February
+| 12-02-2024 | Healthcare     | Gym & Fitness       | Yoga class                   | 1131.10 | Cash           | Want     |   | February
+| 20-02-2024 | Bills          | Rent                | Shared apartment share       | 4539.18 | Net Banking    | Need     |   | February
+| 09-02-2024 | Shopping       | Home Essentials     | Detergent & soap             | 1133.17 | UPI            | Need     |   | February
+| 26-02-2024 | Bills          | Subscriptions       | Notion Pro plan              | 3997.29 | Debit Card     | Need     |   | February
+| 02-02-2024 | Miscellaneous  | Stationery          | Spiral binding               | 2054.47 | UPI            | Need     |   | February
+| 24-02-2024 | Transportation | Fuel                | Petrol for road trip         |   69.63 | Cash           | Need     |   | February
+| 15-02-2024 | Shopping       | Electronics         | Zebronics mouse              |  601.00 | Credit Card    | Want     |   | February
+| 18-02-2024 | Entertainment  | Events              | College fest tickets         |  710.35 | UPI            | Want     |   | February
+| 04-02-2024 | Bills          | Rent                | Hostel room rent             | 1615.11 | UPI            | Need     |   | February
+| 13-02-2024 | Transportation | Vehicle Maintenance | Tyre puncture repair         |  117.89 | Debit Card     | Need     |   | February
+| 03-03-2024 | Miscellaneous  | Travel              | Kodaikanal road trip share   | 3671.53 | Cash           | Want        || March
+| 18-03-2024 | Miscellaneous  | Donations           | Friend crowdfund             | 2676.96 | Credit Card    | Want        || March
+| 10-03-2024 | Miscellaneous  | Miscellaneous       | Random online purchase       | 3325.67 | Debit Card     | Want        || March
+| 27-03-2024 | Education      | Exam Fees           | TCS iON test fee             |  814.62 | Credit Card    | Need        || March
+| 21-03-2024 | Shopping       | Gifts               | Farewell gift pooling        | 2230.94 | Debit Card     | Want        || March
+| 20-03-2024 | Miscellaneous  | Travel              | Train ticket home            |  953.28 | Credit Card    | Want        || March
+| 29-03-2024 | Healthcare     | Insurance           | Health insurance premium     |  319.83 | Cash           | Need        || March
+| 28-03-2024 | Bills          | Internet            | Wi-Fi router recharge        | 1440.93 | Debit Card     | Need        || March
+| 12-03-2024 | Bills          | Electricity         | Smart meter top-up           | 2902.36 | UPI            | Need        || March
+| 19-03-2024 | Entertainment  | Events              | Stand-up comedy              | 1362.02 | Credit Card    | Want        || March
+| 07-03-2024 | Bills          | Rent                | PG accommodation fee         | 5667.90 | Auto-debit     | Need        || March
+| 23-03-2024 | Bills          | Rent                | Shared apartment  share      | 4535.59 | Net Banking    | Need        || March
+| 03-03-2024 | Miscellaneous  | Donations           | Flood relief fund            | 1754.63 | Cash           | Want        || March
+| 02-03-2024 | Bills          | Electricity         | Smart meter top-up           | 4139.02 | Debit Card     | Need        || March
+| 22-03-2024 | Education      | Exam Fees           | Gate exam form               | 2943.13 | Net Banking    | Need        || March
+| 08-03-2024 | Bills          | Subscriptions       | Notion Pro plan              | 4045.40 | UPI            | Need        || March
+| 25-03-2024 | Bills          | Internet            | BSNL broadband               | 1254.03 | Auto-debit     | Need        || March
+| 10-03-2024 | Bills          | Electricity         | EB bill  hostel share        | 2837.26 | Auto-debit     | Need        || March
+| 03-03-2024 | Bills          | Electricity         | Electricity PG room          | 1663.17 | UPI            | Need        || March
+| 28-03-2024 | Miscellaneous  | Travel              | Weekend trip Pondicherry     | 3999.63 | Credit Card    | Want        || March
+| 08-03-2024 | Entertainment  | Movies              | PVR Cinemas  Avengers        | 1143.64 | UPI            | Want        || March
+| 28-03-2024 | Entertainment  | Movies              | SPI Sathyam Tamil film       |  395.89 | Cash           | Want        || March
+| 04-03-2024 | Transportation | Parking             | College parking  month       |  287.04 | UPI            | Need        || March
+| 13-03-2024 | Healthcare     | Medicines           | Pharmacy fever meds          | 1566.69 | Cash           | Need        || March
+| 09-03-2024 | Shopping       | Clothing            | Flipkart ethnic wear         |  187.31 | Debit Card     | Want        || March
+| 15-03-2024 | Bills          | Rent                | Shared apartment  share      | 1350.31 | Net Banking    | Need        || March
+| 21-03-2024 | Transportation | Fuel                | Petrol  Honda Activa         |  480.79 | Debit Card     | Need        || March
+| 27-03-2024 | Food           | Snacks              | Murukku packet               |  359.85 | Credit Card    | Need        || March
+| 12-03-2024 | Transportation | Parking             | Parking meter fee            |  214.62 | UPI            | Need        || March
+| 06-03-2024 | Miscellaneous  | Travel              | Flight  semester break       | 3843.93 | Debit Card     | Want        || March
+| 12-03-2024 | Education      | Exam Fees           | Gate exam form               | 2214.70 | UPI            | Need        || March
+| 12-03-2024 | Miscellaneous  | Stationery          | Ruler & geometry box         | 3306.42 | Credit Card    | Need        || March
+| 07-03-2024 | Healthcare     | Medicines           | Pharmacy  fever meds         |  593.91 | Net Banking    | Need        || March
+| 22-04-2024 | Entertainment  | Events              | Stand-up comedy              |  537.78 | Cash           | Want        || April
+| 09-04-2024 | Healthcare     | Medicines           | Protein supplements          |  463.63 | Credit Card    | Need        || April
+| 23-04-2024 | Healthcare     | Mental Health       | Stress-relief workshop       | 1417.31 | Credit Card    | Need        || April
+| 30-04-2024 | Food           | Meal Prep           | Home cook ingredients        |   95.92 | Debit Card     | Need        || April
+| 22-04-2024 | Miscellaneous  | Miscellaneous       | Bank charges                 | 2768.63 | Debit Card     | Want        || April
+| 21-04-2024 | Miscellaneous  | Travel              | Weekend trip  Pondicherry    | 1191.06 | Debit Card     | Want        || April
+| 03-04-2024 | Entertainment  | Subscriptions       | JioSaavn                     |  585.08 | Debit Card     | Want        || April
+| 20-04-2024 | Bills          | Subscriptions       | iCloud storage 50GB          | 2240.50 | Debit Card     | Need        || April
+| 21-04-2024 | Shopping       | Personal Care       | The Ordinary serum           |  883.83 | UPI            | Need        || April
+| 06-04-2024 | Healthcare     | Doctor Visits       | General physician visit      |  423.50 | Net Banking    | Need        || April
+| 18-04-2024 | Shopping       | Gifts               | Wedding contribution         | 3433.74 | UPI            | Want        || April
+| 24-04-2024 | Shopping       | Electronics         | Pen drive Kingston           |  710.10 | Credit Card    | Want        || April
+| 08-04-2024 | Education      | Online Courses      | Coursera subscription        | 2924.17 | UPI            | Need        || April
+| 06-04-2024 | Education      | Exam Fees           | Gate exam form               | 2624.52 | UPI            | Need        || April
+| 15-04-2024 | Miscellaneous  | Stationery          | Ruler & geometry box         | 1376.01 | Cash           | Need        || April
+| 13-04-2024 | Shopping       | Home Essentials     | Detergent & soap             | 2895.19 | Cash           | Need        || April
+| 09-04-2024 | Miscellaneous  | Travel              | Weekend trip Pondicherry     |  623.87 | Credit Card    | Want        || April
+| 30-04-2024 | Transportation | Ride Share          | Ola cab  college             |  341.47 | UPI            | Want        || April
+| 21-04-2024 | Entertainment  | Hobbies             | Guitar strings               |  703.25 | Cash           | Want        || April
+| 23-04-2024 | Shopping       | Gifts               | Farewell gift pooling        | 1138.29 | Credit Card    | Want        || April
+| 18-04-2024 | Transportation | Ride Share          | Rapido bike ride             |  169.82 | Cash           | Want        || April
+| 08-04-2024 | Education      | Books & Stationery  | Higginbothams reference book | 1678.38 | Credit Card    | Need        || April
+| 22-04-2024 | Food           | Beverages           | Boost health drink           |  560.82 | Debit Card     | Want        || April
+| 11-04-2024 | Shopping       | Clothing            | H&M T-shirts                 | 1079.56 | Debit Card     | Want        || April
+| 27-04-2024 | Miscellaneous  | Travel              | Kodaikanal road trip share   | 3697.17 | UPI            | Want        || April
+| 25-04-2024 | Bills          | Mobile Recharge     | Vi recharge 28-day           | 1503.89 | Net Banking    | Need        || April
+| 25-04-2024 | Shopping       | Electronics         | Boat earphones               |  302.77 | Debit Card     | Want        || April
+| 02-04-2024 | Shopping       | Home Essentials     | Detergent & soap             | 1693.57 | Debit Card     | Need        || April
+| 08-04-2024 | Bills          | Electricity         | Smart meter top-up           | 3331.89 | Debit Card     | Need        || April
+| 27-04-2024 | Transportation | Parking             | College parking  month       |  535.31 | Debit Card     | Need        || April
+| 02-04-2024 | Healthcare     | Insurance           | Two-wheeler insurance        |  100.44 | Cash           | Need        || April
+| 26-04-2024 | Food           | Snacks              | Murukku packet               |   60.98 | Cash           | Need        || April
+| 11-04-2024 | Miscellaneous  | Miscellaneous       | Random online purchase       | 3665.97 | UPI            | Want        || April
+| 13-05-2024 | Bills          | Rent                | PG accommodation fee         | 2926.06 | Debit Card     | Need          |May
+| 09-05-2024 | Healthcare     | Mental Health       | Stress-relief workshop       |  253.97 | Cash           | Need          |May
+| 03-05-2024 | Healthcare     | Gym & Fitness       | Zumba session                |  612.02 | Net Banking    | Want          |May
+| 07-05-2024 | Food           | Beverages           | Cafe latte Starbucks         |  272.18 | Credit Card    | Want          |May
+| 30-05-2024 | Transportation | Vehicle Maintenance | Bike service  TVS            |  399.73 | Debit Card     | Need          |May
+| 31-05-2024 | Miscellaneous  | Stationery          | Printing  assignment         |  766.58 | Credit Card    | Need          |May
+| 19-05-2024 | Miscellaneous  | Stationery          | Printing assignment          |  830.16 | UPI            | Need          |May
+| 29-05-2024 | Shopping       | Home Essentials     | Bedsheet - Pepperfry         |  512.85 | UPI            | Need          |May
+| 23-05-2024 | Education      | Online Courses      | Coursera subscription        | 1679.14 | Net Banking    | Need          |May
+| 11-05-2024 | Entertainment  | Movies              | Netflix DVD plan             | 1423.24 | UPI            | Want          |May
+| 07-05-2024 | Miscellaneous  | Emergency Fund      | Emergency medicine           | 1673.65 | Debit Card     | Need          |May
+| 21-05-2024 | Miscellaneous  | Donations           | Friend crowdfund             | 2214.04 | Debit Card     | Want          |May
+| 16-05-2024 | Entertainment  | Hobbies             | Cricket bat purchase         | 1302.84 | Debit Card     | Want          |May
+| 13-05-2024 | Bills          | Electricity         | Smart meter top-up           | 1749.60 | UPI            | Need          |May
+| 29-05-2024 | Shopping       | Personal Care       | Sunscreen SPF 50             | 2071.74 | Cash           | Need          |May
+| 30-05-2024 | Education      | Exam Fees           | Aptitude test fee            | 1478.81 | UPI            | Need          |May
+| 21-05-2024 | Bills          | Rent                | Hostel room rent             | 5243.69 | Net Banking    | Need          |May
+| 15-05-2024 | Bills          | Internet            | BSNL broadband               |  453.15 | Debit Card     | Need          |May
+| 05-05-2024 | Bills          | Rent                | Shared apartment- share      | 4795.88 | Net Banking    | Need          |May
+| 09-05-2024 | Miscellaneous  | Travel              | Kodaikanal road trip share   | 2019.12 | Credit Card    | Want          |May
+| 05-05-2024 | Transportation | Vehicle Maintenance | Bike service -TVS            |  322.68 | UPI            | Need          |May
+| 08-05-2024 | Food           | Dining Out          | KFC weekend treat            |  700.62 | Cash           | Need          |May
+| 24-05-2024 | Transportation | Vehicle Maintenance | Oil change                   |  213.06 | Debit Card     | Need          |May
+| 18-05-2024 | Bills          | Mobile Recharge     | Airtel postpaid bill         | 5143.58 | Debit Card     | Need          |May
+| 18-05-2024 | Healthcare     | Gym & Fitness       | Cult.fit monthly pass        | 1254.05 | Cash           | Want          |May
+| 09-05-2024 | Shopping       | Electronics         | Boat earphones               | 1575.50 | Credit Card    | Want          |May
+| 24-05-2024 | Transportation | Vehicle Maintenance | Tyre puncture repair         |  420.99 | Cash           | Need          |May
+| 19-05-2024 | Food           | Snacks              | Haldiram's pack              |  255.89 | Credit Card    | Need          |May
+| 14-05-2024 | Bills          | Internet            | ACT Fibernet monthly         | 3280.76 | Net Banking    | Need          |May
+| 29-05-2024 | Education      | Books & Stationery  | Amazon-textbook              | 1848.00 | Debit Card     | Need          |May
+| 19-05-2024 | Entertainment  | Events              | Cultural show                |  386.67 | Debit Card     | Want          |May
+| 13-05-2024 | Miscellaneous  | Emergency Fund      | Unexpected repair            | 3597.66 | Debit Card     | Need          |May
+| 12-05-2024 | Shopping       | Gifts               | Anniversary present          |  351.13 | Debit Card     | Want          |May
+| 08-06-2024 | Shopping       | Home Essentials     | Extension cord               | 1653.24 | Debit Card     | Need         | June
+| 05-06-2024 | Entertainment  | Events              | Stand-up comedy              |  204.65 | Cash           | Want         | June
+| 17-06-2024 | Healthcare     | Insurance           | Two-wheeler insurance        | 1985.75 | Credit Card    | Need         | June
+| 16-06-2024 | Food           | Beverages           | Tender coconut               |   36.24 | UPI            | Want         | June
+| 03-06-2024 | Miscellaneous  | Emergency Fund      | Lost wallet replacement      | 2436.12 | Credit Card    | Need         | June
+| 25-06-2024 | Entertainment  | Gaming              | PlayStation Store            | 1032.76 | UPI            | Want         | June
+| 02-06-2024 | Transportation | Public Transport    | TNSTC bus fare               |  476.34 | Cash           | Need         | June
+| 28-06-2024 | Healthcare     | Medicines           | Pharmacy - fever meds        | 1823.77 | Credit Card    | Need         | June
+| 04-06-2024 | Bills          | Internet            | ACT Fibernet monthly         |  966.53 | Auto-debit     | Need         | June
+| 05-06-2024 | Shopping       | Electronics         | Pen drive - Kingston         | 3207.77 | Cash           | Want         | June
+| 21-06-2024 | Shopping       | Personal Care       | Nykaa skincare order         | 1692.33 | Credit Card    | Need         | June
+| 06-06-2024 | Education      | Books & Stationery  | Printer paper                | 2903.45 | UPI            | Need         | June
+| 26-06-2024 | Transportation | Vehicle Maintenance | Bike service - TVS           |  169.71 | Cash           | Need         | June
+| 22-06-2024 | Miscellaneous  | Emergency Fund      | Emergency medicine           | 2346.55 | Credit Card    | Need         | June
+| 14-06-2024 | Transportation | Ride Share          | Auto fare- hospital          |   29.64 | Debit Card     | Want         | June
+| 20-06-2024 | Healthcare     | Insurance           | Health insurance premium     | 1312.92 | Net Banking    | Need         | June
+| 03-06-2024 | Shopping       | Home Essentials     | Detergent & soap             |  575.24 | Credit Card    | Need         | June
+| 13-06-2024 | Shopping       | Home Essentials     | Detergent & soap             |  430.45 | UPI            | Need         | June
+| 13-06-2024 | Bills          | Rent                | Hostel room rent             | 4088.82 | Debit Card     | Need         | June
+| 20-06-2024 | Education      | Exam Fees           | Aptitude test fee            |  342.11 | Debit Card     | Need         | June
+| 15-06-2024 | Bills          | Electricity         | EB bill - hostel share       | 4203.63 | Net Banking    | Need         | June
+| 17-06-2024 | Miscellaneous  | Stationery          | Spiral binding               | 3424.69 | Cash           | Need         | June
+| 09-06-2024 | Healthcare     | Insurance           | Student accident cover       |  749.41 | Net Banking    | Need         | June
+| 18-06-2024 | Shopping       | Electronics         | Boat earphones               | 3326.64 | Cash           | Want         | June
+| 28-06-2024 | Transportation | Ride Share          | Ola outstation               |  583.09 | Cash           | Want         | June
+| 01-06-2024 | Healthcare     | Medicines           | Vitamin D supplements        | 1584.61 | Cash           | Need         | June
+| 22-06-2024 | Transportation | Parking             | College parking - month      |  358.03 | Cash           | Need         | June
+| 24-06-2024 | Healthcare     | Medicines           | Pharmacy - fever meds        |  590.69 | Cash           | Need         | June
+| 04-06-2024 | Education      | Coaching            | Coding bootcamp deposit      | 2405.62 | Net Banking    | Want         | June
+| 22-06-2024 | Food           | Dining Out          | Zomato order - Biryani       |  305.85 | Cash           | Need         | June
+| 29-06-2024 | Healthcare     | Doctor Visits       | General physician visit      |  567.47 | Cash           | Need         | June
+| 18-06-2024 | Bills          | Subscriptions       | Google One storage           | 4524.86 | Debit Card     | Need         | June
+| 25-06-2024 | Miscellaneous  | Emergency Fund      | Unexpected repair            | 1818.98 | UPI            | Need         | June
+| 15-06-2024 | Healthcare     | Mental Health       | Stress-relief workshop       |  253.97 | Cash           | Need          |May
+| 15-06-2024 | Entertainment  | Hobbies             | Guitar strings               |  703.25 | Cash           | Want        || April
++------------+----------------+---------------------+------------------------------+---------+----------------+--------------+-----------+
+200 rows in set (0.00 sec)
+
+mysql> select Date , Description , Amount from student_budget where Category ="Food";
++------------+-------------------------+--------+
+| Date       | Description             | Amount |
++------------+-------------------------+--------+
+| 24-01-2024 | Protein powder top-up   | 406.23 |
+| 03-01-2024 | Big Basket order        | 158.06 |
+| 01-01-2024 | Dabba from mess         | 417.19 |
+| 18-01-2024 | Tiffin service  monthly | 685.53 |
+| 25-02-2024 | Reliance Smart Bazaar   | 757.69 |
+| 26-02-2024 | Murukku packet          | 455.44 |
+| 04-02-2024 | Nilgiris dairy run      | 167.50 |
+| 03-02-2024 | Spencer's weekly shop   | 364.61 |
+| 27-03-2024 | Murukku packet          | 359.85 |
+| 30-04-2024 | Home cook ingredients   |  95.92 |
+| 22-04-2024 | Boost health drink      | 560.82 |
+| 26-04-2024 | Murukku packet          |  60.98 |
+| 07-05-2024 | Cafe latte Starbucks    | 272.18 |
+| 08-05-2024 | KFC weekend treat       | 700.62 |
+| 19-05-2024 | Haldiram's pack         | 255.89 |
+| 16-06-2024 | Tender coconut          |  36.24 |
+| 22-06-2024 | Zomato order - Biryani  | 305.85 |
++------------+-------------------------+--------+
+17 rows in set (0.00 sec)
+
+mysql> select * from student_budget order by amount desc;
++------------+----------------+---------------------+------------------------------+---------+----------------+--------------+-----------+
+| Date       | Category       | Subcategory         | Description                  | Amount  | Payment_Method | Expense_Type | Month     |
++------------+----------------+---------------------+------------------------------+---------+----------------+--------------+-----------+
+| 07-03-2024 | Bills          | Rent                | PG accommodation fee         | 5667.90 | Auto-debit     | Need        || March
+| 21-05-2024 | Bills          | Rent                | Hostel room rent             | 5243.69 | Net Banking    | Need          |May
+| 25-02-2024 | Bills          | Electricity         | Electricity PG room          | 5213.25 | Auto-debit     | Need     |   | February
+| 18-05-2024 | Bills          | Mobile Recharge     | Airtel postpaid bill         | 5143.58 | Debit Card     | Need          |May
+| 05-05-2024 | Bills          | Rent                | Shared apartment- share      | 4795.88 | Net Banking    | Need          |May
+| 20-02-2024 | Bills          | Rent                | Shared apartment share       | 4539.18 | Net Banking    | Need     |   | February
+| 23-03-2024 | Bills          | Rent                | Shared apartment  share      | 4535.59 | Net Banking    | Need        || March
+| 18-06-2024 | Bills          | Subscriptions       | Google One storage           | 4524.86 | Debit Card     | Need         | June
+| 15-06-2024 | Bills          | Electricity         | EB bill - hostel share       | 4203.63 | Net Banking    | Need         | June
+| 02-03-2024 | Bills          | Electricity         | Smart meter top-up           | 4139.02 | Debit Card     | Need        || March
+| 13-06-2024 | Bills          | Rent                | Hostel room rent             | 4088.82 | Debit Card     | Need         | June
+| 08-03-2024 | Bills          | Subscriptions       | Notion Pro plan              | 4045.40 | UPI            | Need        || March
+| 28-03-2024 | Miscellaneous  | Travel              | Weekend trip Pondicherry     | 3999.63 | Credit Card    | Want        || March
+| 26-02-2024 | Bills          | Subscriptions       | Notion Pro plan              | 3997.29 | Debit Card     | Need     |   | February
+| 04-01-2024 | Miscellaneous  | Travel              | Train ticket  home           | 3888.11 | UPI            | Want      |  | January
+| 06-03-2024 | Miscellaneous  | Travel              | Flight  semester break       | 3843.93 | Debit Card     | Want        || March
+| 27-04-2024 | Miscellaneous  | Travel              | Kodaikanal road trip share   | 3697.17 | UPI            | Want        || April
+| 03-03-2024 | Miscellaneous  | Travel              | Kodaikanal road trip share   | 3671.53 | Cash           | Want        || March
+| 11-04-2024 | Miscellaneous  | Miscellaneous       | Random online purchase       | 3665.97 | UPI            | Want        || April
+| 07-01-2024 | Miscellaneous  | Donations           | Friend crowdfund             | 3611.72 | UPI            | Want      |  | January
+| 13-05-2024 | Miscellaneous  | Emergency Fund      | Unexpected repair            | 3597.66 | Debit Card     | Need          |May
+| 18-04-2024 | Shopping       | Gifts               | Wedding contribution         | 3433.74 | UPI            | Want        || April
+| 17-06-2024 | Miscellaneous  | Stationery          | Spiral binding               | 3424.69 | Cash           | Need         | June
+| 05-01-2024 | Shopping       | Gifts               | Farewell gift pooling        | 3378.83 | UPI            | Want      |  | January
+| 08-04-2024 | Bills          | Electricity         | Smart meter top-up           | 3331.89 | Debit Card     | Need        || April
+| 18-06-2024 | Shopping       | Electronics         | Boat earphones               | 3326.64 | Cash           | Want         | June
+| 10-03-2024 | Miscellaneous  | Miscellaneous       | Random online purchase       | 3325.67 | Debit Card     | Want        || March
+| 12-03-2024 | Miscellaneous  | Stationery          | Ruler & geometry box         | 3306.42 | Credit Card    | Need        || March
+| 14-05-2024 | Bills          | Internet            | ACT Fibernet monthly         | 3280.76 | Net Banking    | Need          |May
+| 18-01-2024 | Miscellaneous  | Donations           | Friend crowdfund             | 3233.84 | UPI            | Want      |  | January
+| 05-06-2024 | Shopping       | Electronics         | Pen drive - Kingston         | 3207.77 | Cash           | Want         | June
+| 22-03-2024 | Education      | Exam Fees           | Gate exam form               | 2943.13 | Net Banking    | Need        || March
+| 13-05-2024 | Bills          | Rent                | PG accommodation fee         | 2926.06 | Debit Card     | Need          |May
+| 08-04-2024 | Education      | Online Courses      | Coursera subscription        | 2924.17 | UPI            | Need        || April
+| 06-06-2024 | Education      | Books & Stationery  | Printer paper                | 2903.45 | UPI            | Need         | June
+| 12-03-2024 | Bills          | Electricity         | Smart meter top-up           | 2902.36 | UPI            | Need        || March
+| 13-04-2024 | Shopping       | Home Essentials     | Detergent & soap             | 2895.19 | Cash           | Need        || April
+| 08-01-2024 | Education      | Books & Stationery  | Printer paper                | 2843.20 | Credit Card    | Need      |  | January
+| 10-03-2024 | Bills          | Electricity         | EB bill  hostel share        | 2837.26 | Auto-debit     | Need        || March
+| 22-04-2024 | Miscellaneous  | Miscellaneous       | Bank charges                 | 2768.63 | Debit Card     | Want        || April
+| 18-03-2024 | Miscellaneous  | Donations           | Friend crowdfund             | 2676.96 | Credit Card    | Want        || March
+| 06-04-2024 | Education      | Exam Fees           | Gate exam form               | 2624.52 | UPI            | Need        || April
+| 15-02-2024 | Miscellaneous  | Miscellaneous       | Vending machine              | 2454.48 | Cash           | Want     |   | February
+| 03-06-2024 | Miscellaneous  | Emergency Fund      | Lost wallet replacement      | 2436.12 | Credit Card    | Need         | June
+| 04-06-2024 | Education      | Coaching            | Coding bootcamp deposit      | 2405.62 | Net Banking    | Want         | June
+| 22-06-2024 | Miscellaneous  | Emergency Fund      | Emergency medicine           | 2346.55 | Credit Card    | Need         | June
+| 20-04-2024 | Bills          | Subscriptions       | iCloud storage 50GB          | 2240.50 | Debit Card     | Need        || April
+| 01-02-2024 | Education      | Online Courses      | Udemy course Python          | 2236.63 | Debit Card     | Need     |   | February
+| 21-03-2024 | Shopping       | Gifts               | Farewell gift pooling        | 2230.94 | Debit Card     | Want        || March
+| 12-03-2024 | Education      | Exam Fees           | Gate exam form               | 2214.70 | UPI            | Need        || March
+| 21-05-2024 | Miscellaneous  | Donations           | Friend crowdfund             | 2214.04 | Debit Card     | Want          |May
+| 29-05-2024 | Shopping       | Personal Care       | Sunscreen SPF 50             | 2071.74 | Cash           | Need          |May
+| 02-02-2024 | Miscellaneous  | Stationery          | Spiral binding               | 2054.47 | UPI            | Need     |   | February
+| 09-05-2024 | Miscellaneous  | Travel              | Kodaikanal road trip share   | 2019.12 | Credit Card    | Want          |May
+| 17-06-2024 | Healthcare     | Insurance           | Two-wheeler insurance        | 1985.75 | Credit Card    | Need         | June
+| 12-02-2024 | Healthcare     | Gym & Fitness       | Cult.fit monthly pass        | 1900.31 | Credit Card    | Want     |   | February
+| 29-05-2024 | Education      | Books & Stationery  | Amazon-textbook              | 1848.00 | Debit Card     | Need          |May
+| 09-02-2024 | Education      | Online Courses      | NPTEL exam fee               | 1834.25 | UPI            | Need     |   | February
+| 28-06-2024 | Healthcare     | Medicines           | Pharmacy - fever meds        | 1823.77 | Credit Card    | Need         | June
+| 25-06-2024 | Miscellaneous  | Emergency Fund      | Unexpected repair            | 1818.98 | UPI            | Need         | June
+| 03-03-2024 | Miscellaneous  | Donations           | Flood relief fund            | 1754.63 | Cash           | Want        || March
+| 13-05-2024 | Bills          | Electricity         | Smart meter top-up           | 1749.60 | UPI            | Need          |May
+| 08-01-2024 | Bills          | Mobile Recharge     | Airtel postpaid bill         | 1738.18 | Debit Card     | Need      |  | January
+| 02-04-2024 | Shopping       | Home Essentials     | Detergent & soap             | 1693.57 | Debit Card     | Need        || April
+| 21-06-2024 | Shopping       | Personal Care       | Nykaa skincare order         | 1692.33 | Credit Card    | Need         | June
+| 23-05-2024 | Education      | Online Courses      | Coursera subscription        | 1679.14 | Net Banking    | Need          |May
+| 08-04-2024 | Education      | Books & Stationery  | Higginbothams reference book | 1678.38 | Credit Card    | Need        || April
+| 07-05-2024 | Miscellaneous  | Emergency Fund      | Emergency medicine           | 1673.65 | Debit Card     | Need          |May
+| 03-03-2024 | Bills          | Electricity         | Electricity PG room          | 1663.17 | UPI            | Need        || March
+| 08-06-2024 | Shopping       | Home Essentials     | Extension cord               | 1653.24 | Debit Card     | Need         | June
+| 04-02-2024 | Bills          | Rent                | Hostel room rent             | 1615.11 | UPI            | Need     |   | February
+| 24-01-2024 | Shopping       | Home Essentials     | Extension cord               | 1589.54 | Cash           | Need      |  | January
+| 01-06-2024 | Healthcare     | Medicines           | Vitamin D supplements        | 1584.61 | Cash           | Need         | June
+| 09-05-2024 | Shopping       | Electronics         | Boat earphones               | 1575.50 | Credit Card    | Want          |May
+| 13-03-2024 | Healthcare     | Medicines           | Pharmacy fever meds          | 1566.69 | Cash           | Need        || March
+| 25-04-2024 | Bills          | Mobile Recharge     | Vi recharge 28-day           | 1503.89 | Net Banking    | Need        || April
+| 05-02-2024 | Bills          | Mobile Recharge     | Airtel postpaid bill         | 1490.12 | Debit Card     | Need     |   | February
+| 30-05-2024 | Education      | Exam Fees           | Aptitude test fee            | 1478.81 | UPI            | Need          |May
+| 28-03-2024 | Bills          | Internet            | Wi-Fi router recharge        | 1440.93 | Debit Card     | Need        || March
+| 11-05-2024 | Entertainment  | Movies              | Netflix DVD plan             | 1423.24 | UPI            | Want          |May
+| 23-04-2024 | Healthcare     | Mental Health       | Stress-relief workshop       | 1417.31 | Credit Card    | Need        || April
+| 15-04-2024 | Miscellaneous  | Stationery          | Ruler & geometry box         | 1376.01 | Cash           | Need        || April
+| 11-02-2024 | Healthcare     | Insurance           | Two-wheeler insurance        | 1375.06 | Credit Card    | Need     |   | February
+| 19-03-2024 | Entertainment  | Events              | Stand-up comedy              | 1362.02 | Credit Card    | Want        || March
+| 21-01-2024 | Healthcare     | Mental Health       | Counselling session          | 1355.97 | Credit Card    | Need      |  | January
+| 23-02-2024 | Healthcare     | Medicines           | Vitamin D supplements        | 1350.52 | Credit Card    | Need     |   | February
+| 15-03-2024 | Bills          | Rent                | Shared apartment  share      | 1350.31 | Net Banking    | Need        || March
+| 20-06-2024 | Healthcare     | Insurance           | Health insurance premium     | 1312.92 | Net Banking    | Need         | June
+| 16-05-2024 | Entertainment  | Hobbies             | Cricket bat purchase         | 1302.84 | Debit Card     | Want          |May
+| 24-01-2024 | Entertainment  | Movies              | PVR Cinemas  Avengers        | 1296.47 | Credit Card    | Want      |  | January
+| 18-05-2024 | Healthcare     | Gym & Fitness       | Cult.fit monthly pass        | 1254.05 | Cash           | Want          |May
+| 25-03-2024 | Bills          | Internet            | BSNL broadband               | 1254.03 | Auto-debit     | Need        || March
+| 21-04-2024 | Miscellaneous  | Travel              | Weekend trip  Pondicherry    | 1191.06 | Debit Card     | Want        || April
+| 08-03-2024 | Entertainment  | Movies              | PVR Cinemas  Avengers        | 1143.64 | UPI            | Want        || March
+| 23-04-2024 | Shopping       | Gifts               | Farewell gift pooling        | 1138.29 | Credit Card    | Want        || April
+| 20-01-2024 | Entertainment  | Movies              | PVR Cinemas Avengers         | 1134.56 | Credit Card    | Want      |  | January
+| 09-02-2024 | Shopping       | Home Essentials     | Detergent & soap             | 1133.17 | UPI            | Need     |   | February
+| 12-02-2024 | Healthcare     | Gym & Fitness       | Yoga class                   | 1131.10 | Cash           | Want     |   | February
+| 06-02-2024 | Education      | Tuition Fees        | Lab fee payment              | 1125.72 | Net Banking    | Need     |   | February
+| 09-02-2024 | Bills          | Internet            | BSNL broadband               | 1123.35 | UPI            | Need     |   | February
+| 21-01-2024 | Shopping       | Personal Care       | Nykaa skincare order         | 1097.90 | UPI            | Need      |  | January
+| 14-02-2024 | Bills          | Subscriptions       | Notion Pro plan              | 1096.41 | Net Banking    | Need     |   | February
+| 11-04-2024 | Shopping       | Clothing            | H&M T-shirts                 | 1079.56 | Debit Card     | Want        || April
+| 28-02-2024 | Healthcare     | Doctor Visits       | Dentist check-up             | 1038.89 | Net Banking    | Need     |   | February
+| 25-06-2024 | Entertainment  | Gaming              | PlayStation Store            | 1032.76 | UPI            | Want         | June
+| 19-02-2024 | Shopping       | Clothing            | H&M T-shirts                 |  999.18 | Credit Card    | Want     |   | February
+| 04-06-2024 | Bills          | Internet            | ACT Fibernet monthly         |  966.53 | Auto-debit     | Need         | June
+| 20-03-2024 | Miscellaneous  | Travel              | Train ticket home            |  953.28 | Credit Card    | Want        || March
+| 23-01-2024 | Entertainment  | Hobbies             | Badminton court booking      |  948.10 | Cash           | Want      |  | January
+| 21-04-2024 | Shopping       | Personal Care       | The Ordinary serum           |  883.83 | UPI            | Need        || April
+| 02-01-2024 | Education      | Exam Fees           | Gate exam form               |  871.71 | Credit Card    | Need      |  | January
+| 13-02-2024 | Bills          | Subscriptions       | Notion Pro plan              |  870.75 | Net Banking    | Need     |   | February
+| 19-05-2024 | Miscellaneous  | Stationery          | Printing assignment          |  830.16 | UPI            | Need          |May
+| 27-03-2024 | Education      | Exam Fees           | TCS iON test fee             |  814.62 | Credit Card    | Need        || March
+| 08-01-2024 | Healthcare     | Doctor Visits       | General physician visit      |  770.58 | Cash           | Need      |  | January
+| 31-05-2024 | Miscellaneous  | Stationery          | Printing  assignment         |  766.58 | Credit Card    | Need          |May
+| 26-02-2024 | Entertainment  | Subscriptions       | JioSaavn                     |  758.37 | Credit Card    | Want     |   | February
+| 25-02-2024 | Food           | Groceries           | Reliance Smart Bazaar        |  757.69 | Cash           | Need     |   | February
+| 09-06-2024 | Healthcare     | Insurance           | Student accident cover       |  749.41 | Net Banking    | Need         | June
+| 18-02-2024 | Entertainment  | Events              | College fest tickets         |  710.35 | UPI            | Want     |   | February
+| 24-04-2024 | Shopping       | Electronics         | Pen drive Kingston           |  710.10 | Credit Card    | Want        || April
+| 21-04-2024 | Entertainment  | Hobbies             | Guitar strings               |  703.25 | Cash           | Want        || April
+| 15-06-2024 | Entertainment  | Hobbies             | Guitar strings               |  703.25 | Cash           | Want        || April
+| 08-05-2024 | Food           | Dining Out          | KFC weekend treat            |  700.62 | Cash           | Need          |May
+| 18-01-2024 | Food           | Meal Prep           | Tiffin service  monthly      |  685.53 | UPI            | Need      |  | January
+| 17-01-2024 | Shopping       | Home Essentials     | Bedsheet  Pepperfry          |  626.31 | Debit Card     | Need      |  | January
+| 09-04-2024 | Miscellaneous  | Travel              | Weekend trip Pondicherry     |  623.87 | Credit Card    | Want        || April
+| 03-05-2024 | Healthcare     | Gym & Fitness       | Zumba session                |  612.02 | Net Banking    | Want          |May
+| 15-02-2024 | Shopping       | Electronics         | Zebronics mouse              |  601.00 | Credit Card    | Want     |   | February
+| 07-03-2024 | Healthcare     | Medicines           | Pharmacy  fever meds         |  593.91 | Net Banking    | Need        || March
+| 24-06-2024 | Healthcare     | Medicines           | Pharmacy - fever meds        |  590.69 | Cash           | Need         | June
+| 08-01-2024 | Transportation | Vehicle Maintenance | Bike service  TVS            |  587.12 | Debit Card     | Need      |  | January
+| 03-04-2024 | Entertainment  | Subscriptions       | JioSaavn                     |  585.08 | Debit Card     | Want        || April
+| 28-06-2024 | Transportation | Ride Share          | Ola outstation               |  583.09 | Cash           | Want         | June
+| 03-06-2024 | Shopping       | Home Essentials     | Detergent & soap             |  575.24 | Credit Card    | Need         | June
+| 29-06-2024 | Healthcare     | Doctor Visits       | General physician visit      |  567.47 | Cash           | Need         | June
+| 22-04-2024 | Food           | Beverages           | Boost health drink           |  560.82 | Debit Card     | Want        || April
+| 22-04-2024 | Entertainment  | Events              | Stand-up comedy              |  537.78 | Cash           | Want        || April
+| 27-04-2024 | Transportation | Parking             | College parking  month       |  535.31 | Debit Card     | Need        || April
+| 29-05-2024 | Shopping       | Home Essentials     | Bedsheet - Pepperfry         |  512.85 | UPI            | Need          |May
+| 07-02-2024 | Healthcare     | Mental Health       | Counselling session          |  484.70 | Cash           | Need     |   | February
+| 21-03-2024 | Transportation | Fuel                | Petrol  Honda Activa         |  480.79 | Debit Card     | Need        || March
+| 02-06-2024 | Transportation | Public Transport    | TNSTC bus fare               |  476.34 | Cash           | Need         | June
+| 09-04-2024 | Healthcare     | Medicines           | Protein supplements          |  463.63 | Credit Card    | Need        || April
+| 26-02-2024 | Food           | Snacks              | Murukku packet               |  455.44 | Debit Card     | Need     |   | February
+| 15-05-2024 | Bills          | Internet            | BSNL broadband               |  453.15 | Debit Card     | Need          |May
+| 13-06-2024 | Shopping       | Home Essentials     | Detergent & soap             |  430.45 | UPI            | Need         | June
+| 06-04-2024 | Healthcare     | Doctor Visits       | General physician visit      |  423.50 | Net Banking    | Need        || April
+| 24-05-2024 | Transportation | Vehicle Maintenance | Tyre puncture repair         |  420.99 | Cash           | Need          |May
+| 01-01-2024 | Food           | Meal Prep           | Dabba from mess              |  417.19 | Cash           | Need      |  | January
+| 24-01-2024 | Food           | Meal Prep           | Protein powder top-up        |  406.23 | UPI            | Need      |  | January
+| 30-05-2024 | Transportation | Vehicle Maintenance | Bike service  TVS            |  399.73 | Debit Card     | Need          |May
+| 28-03-2024 | Entertainment  | Movies              | SPI Sathyam Tamil film       |  395.89 | Cash           | Want        || March
+| 19-05-2024 | Entertainment  | Events              | Cultural show                |  386.67 | Debit Card     | Want          |May
+| 03-02-2024 | Food           | Groceries           | Spencer's weekly shop        |  364.61 | Credit Card    | Need     |   | February
+| 29-01-2024 | Entertainment  | Subscriptions       | Disney+ Hotstar              |  360.64 | UPI            | Want      |  | January
+| 27-03-2024 | Food           | Snacks              | Murukku packet               |  359.85 | Credit Card    | Need        || March
+| 22-06-2024 | Transportation | Parking             | College parking - month      |  358.03 | Cash           | Need         | June
+| 12-05-2024 | Shopping       | Gifts               | Anniversary present          |  351.13 | Debit Card     | Want          |May
+| 20-06-2024 | Education      | Exam Fees           | Aptitude test fee            |  342.11 | Debit Card     | Need         | June
+| 30-04-2024 | Transportation | Ride Share          | Ola cab  college             |  341.47 | UPI            | Want        || April
+| 05-05-2024 | Transportation | Vehicle Maintenance | Bike service -TVS            |  322.68 | UPI            | Need          |May
+| 29-03-2024 | Healthcare     | Insurance           | Health insurance premium     |  319.83 | Cash           | Need        || March
+| 14-01-2024 | Transportation | Parking             | College parking  month       |  310.94 | Cash           | Need      |  | January
+| 22-06-2024 | Food           | Dining Out          | Zomato order - Biryani       |  305.85 | Cash           | Need         | June
+| 25-04-2024 | Shopping       | Electronics         | Boat earphones               |  302.77 | Debit Card     | Want        || April
+| 04-03-2024 | Transportation | Parking             | College parking  month       |  287.04 | UPI            | Need        || March
+| 07-05-2024 | Food           | Beverages           | Cafe latte Starbucks         |  272.18 | Credit Card    | Want          |May
+| 19-01-2024 | Miscellaneous  | Travel              | Weekend trip  Pondicherry    |  261.24 | Credit Card    | Want      |  | January
+| 19-05-2024 | Food           | Snacks              | Haldiram's pack              |  255.89 | Credit Card    | Need          |May
+| 09-05-2024 | Healthcare     | Mental Health       | Stress-relief workshop       |  253.97 | Cash           | Need          |May
+| 15-06-2024 | Healthcare     | Mental Health       | Stress-relief workshop       |  253.97 | Cash           | Need          |May
+| 23-01-2024 | Entertainment  | Subscriptions       | Disney+ Hotstar              |  239.77 | Debit Card     | Want      |  | January
+| 03-01-2024 | Transportation | Public Transport    | MTC season ticket            |  222.26 | UPI            | Need      |  | January
+| 12-03-2024 | Transportation | Parking             | Parking meter fee            |  214.62 | UPI            | Need        || March
+| 24-05-2024 | Transportation | Vehicle Maintenance | Oil change                   |  213.06 | Debit Card     | Need          |May
+| 05-06-2024 | Entertainment  | Events              | Stand-up comedy              |  204.65 | Cash           | Want         | June
+| 09-03-2024 | Shopping       | Clothing            | Flipkart ethnic wear         |  187.31 | Debit Card     | Want        || March
+| 18-04-2024 | Transportation | Ride Share          | Rapido bike ride             |  169.82 | Cash           | Want        || April
+| 26-06-2024 | Transportation | Vehicle Maintenance | Bike service - TVS           |  169.71 | Cash           | Need         | June
+| 04-02-2024 | Food           | Groceries           | Nilgiris dairy run           |  167.50 | Credit Card    | Need     |   | February
+| 09-01-2024 | Healthcare     | Mental Health       | Counselling session          |  162.95 | UPI            | Need      |  | January
+| 03-01-2024 | Food           | Groceries           | Big Basket order             |  158.06 | Debit Card     | Need      |  | January
+| 14-01-2024 | Transportation | Ride Share          | Rapido bike ride             |  126.27 | UPI            | Want      |  | January
+| 11-02-2024 | Education      | Books & Stationery  | Printer paper                |  123.12 | UPI            | Need     |   | February
+| 13-02-2024 | Transportation | Vehicle Maintenance | Tyre puncture repair         |  117.89 | Debit Card     | Need     |   | February
+| 04-02-2024 | Shopping       | Clothing            | College fest outfit          |  105.75 | UPI            | Want     |   | February
+| 01-01-2024 | Transportation | Fuel                | Fuel refill  bike            |  104.41 | Cash           | Need      |  | January
+| 02-04-2024 | Healthcare     | Insurance           | Two-wheeler insurance        |  100.44 | Cash           | Need        || April
+| 30-04-2024 | Food           | Meal Prep           | Home cook ingredients        |   95.92 | Debit Card     | Need        || April
+| 07-01-2024 | Transportation | Ride Share          | Auto fare  hospital          |   85.13 | Debit Card     | Want      |  | January
+| 24-02-2024 | Transportation | Fuel                | Petrol for road trip         |   69.63 | Cash           | Need     |   | February
+| 26-04-2024 | Food           | Snacks              | Murukku packet               |   60.98 | Cash           | Need        || April
+| 22-01-2024 | Entertainment  | Hobbies             | Cricket bat purchase         |   60.43 | Credit Card    | Want      |  | January
+| 18-01-2024 | Miscellaneous  | Emergency Fund      | Unexpected repair            |   57.08 | Cash           | Need      |  | January
+| 04-01-2024 | Transportation | Ride Share          | Rapido bike ride             |   52.46 | Cash           | Want      |  | January
+| 01-01-2024 | Transportation | Vehicle Maintenance | Bike service  TVS            |   44.59 | Debit Card     | Need      |  | January
+| 28-02-2024 | Transportation | Vehicle Maintenance | Oil change                   |   40.79 | UPI            | Need     |   | February
+| 16-06-2024 | Food           | Beverages           | Tender coconut               |   36.24 | UPI            | Want         | June
+| 14-06-2024 | Transportation | Ride Share          | Auto fare- hospital          |   29.64 | Debit Card     | Want         | June
++------------+----------------+---------------------+------------------------------+---------+----------------+--------------+-----------+
+200 rows in set (0.00 sec)
+
+mysql> select description , category , amount from student_budget order by amount asc limit 5;
++---------------------+----------------+--------+
+| description         | category       | amount |
++---------------------+----------------+--------+
+| Auto fare- hospital | Transportation |  29.64 |
+| Tender coconut      | Food           |  36.24 |
+| Oil change          | Transportation |  40.79 |
+| Bike service  TVS   | Transportation |  44.59 |
+| Rapido bike ride    | Transportation |  52.46 |
++---------------------+----------------+--------+
+5 rows in set (0.00 sec)
+
+mysql> select expense_type , sum(amount) from student_budget group by expense_type;
++--------------+-------------+
+| expense_type | sum(amount) |
++--------------+-------------+
+| Need         |   198115.67 |
+| Want         |    97333.37 |
++--------------+-------------+
+2 rows in set (0.01 sec)
+
+mysql> select category , count(*) from student_budget group by category;
++----------------+----------+
+| category       | count(*) |
++----------------+----------+
+| Shopping       |       28 |
+| Miscellaneous  |       31 |
+| Transportation |       26 |
+| Food           |       17 |
+| Healthcare     |       27 |
+| Education      |       18 |
+| Entertainment  |       20 |
+| Bills          |       33 |
++----------------+----------+
+8 rows in set (0.00 sec)
+
+mysql> select category , count(*) as Transaction_Count from student_budget group by category;
++----------------+-------------------+
+| category       | Transaction_Count |
++----------------+-------------------+
+| Shopping       |                28 |
+| Miscellaneous  |                31 |
+| Transportation |                26 |
+| Food           |                17 |
+| Healthcare     |                27 |
+| Education      |                18 |
+| Entertainment  |                20 |
+| Bills          |                33 |
++----------------+-------------------+
+8 rows in set (0.00 sec)
+
+mysql> select sum(amount) from student_budget;
++-------------+
+| sum(amount) |
++-------------+
+|   295449.04 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> >> select avg(amount),min(amount),max(amount) from student_budget where Payment_Method = “UPI”;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '>> select avg(amount),min(amount),max(amount) from student_budget where Payment_' at line 1
+mysql> >> select avg(amount),min(amount),max(amount) from student_budget where Payment_Method = 'UPI';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '>> select avg(amount),min(amount),max(amount) from student_budget where Payment_' at line 1
+mysql> select avg(amount),min(amount),max(amount) from student_budget where Payment_Method = “UPI”;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?UPI?' at line 1
+mysql> select avg(amount),min(amount),max(amount) from student_budget where Payment_Method = 'UPI';
++-------------+-------------+-------------+
+| avg(amount) | min(amount) | max(amount) |
++-------------+-------------+-------------+
+| 1522.125778 |       36.24 |     4045.40 |
++-------------+-------------+-------------+
+1 row in set (0.01 sec)
+
+mysql> select date , subcategory , description ,amount from student_budget where Category= ’Healthcare’ AND Amount > 500;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?Healthcare? AND Amount > 500' at line 1
+mysql> select date , subcategory , description ,amount from student_budget where Category= 'Healthcare' AND Amount > 500;
++------------+---------------+--------------------------+---------+
+| date       | subcategory   | description              | amount  |
++------------+---------------+--------------------------+---------+
+| 21-01-2024 | Mental Health | Counselling session      | 1355.97 |
+| 08-01-2024 | Doctor Visits | General physician visit  |  770.58 |
+| 23-02-2024 | Medicines     | Vitamin D supplements    | 1350.52 |
+| 11-02-2024 | Insurance     | Two-wheeler insurance    | 1375.06 |
+| 12-02-2024 | Gym & Fitness | Cult.fit monthly pass    | 1900.31 |
+| 28-02-2024 | Doctor Visits | Dentist check-up         | 1038.89 |
+| 12-02-2024 | Gym & Fitness | Yoga class               | 1131.10 |
+| 13-03-2024 | Medicines     | Pharmacy fever meds      | 1566.69 |
+| 07-03-2024 | Medicines     | Pharmacy  fever meds     |  593.91 |
+| 23-04-2024 | Mental Health | Stress-relief workshop   | 1417.31 |
+| 03-05-2024 | Gym & Fitness | Zumba session            |  612.02 |
+| 18-05-2024 | Gym & Fitness | Cult.fit monthly pass    | 1254.05 |
+| 17-06-2024 | Insurance     | Two-wheeler insurance    | 1985.75 |
+| 28-06-2024 | Medicines     | Pharmacy - fever meds    | 1823.77 |
+| 20-06-2024 | Insurance     | Health insurance premium | 1312.92 |
+| 09-06-2024 | Insurance     | Student accident cover   |  749.41 |
+| 01-06-2024 | Medicines     | Vitamin D supplements    | 1584.61 |
+| 24-06-2024 | Medicines     | Pharmacy - fever meds    |  590.69 |
+| 29-06-2024 | Doctor Visits | General physician visit  |  567.47 |
++------------+---------------+--------------------------+---------+
+19 rows in set (0.00 sec)
+
+mysql>  select date,category,description,amount from student_budget where Payment_Method = “Cash” order by amount dsc;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?Cash? order by amount dsc' at line 1
+mysql>  select date,category,description,amount from student_budget where Payment_Method = 'Cash' order by amount dsc;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'dsc' at line 1
+mysql>  select date,category,description,amount from student_budget where Payment_Method = 'Cash' order by amount desc;
++------------+----------------+----------------------------+---------+
+| date       | category       | description                | amount  |
++------------+----------------+----------------------------+---------+
+| 03-03-2024 | Miscellaneous  | Kodaikanal road trip share | 3671.53 |
+| 17-06-2024 | Miscellaneous  | Spiral binding             | 3424.69 |
+| 18-06-2024 | Shopping       | Boat earphones             | 3326.64 |
+| 05-06-2024 | Shopping       | Pen drive - Kingston       | 3207.77 |
+| 13-04-2024 | Shopping       | Detergent & soap           | 2895.19 |
+| 15-02-2024 | Miscellaneous  | Vending machine            | 2454.48 |
+| 29-05-2024 | Shopping       | Sunscreen SPF 50           | 2071.74 |
+| 03-03-2024 | Miscellaneous  | Flood relief fund          | 1754.63 |
+| 24-01-2024 | Shopping       | Extension cord             | 1589.54 |
+| 01-06-2024 | Healthcare     | Vitamin D supplements      | 1584.61 |
+| 13-03-2024 | Healthcare     | Pharmacy fever meds        | 1566.69 |
+| 15-04-2024 | Miscellaneous  | Ruler & geometry box       | 1376.01 |
+| 18-05-2024 | Healthcare     | Cult.fit monthly pass      | 1254.05 |
+| 12-02-2024 | Healthcare     | Yoga class                 | 1131.10 |
+| 23-01-2024 | Entertainment  | Badminton court booking    |  948.10 |
+| 08-01-2024 | Healthcare     | General physician visit    |  770.58 |
+| 25-02-2024 | Food           | Reliance Smart Bazaar      |  757.69 |
+| 21-04-2024 | Entertainment  | Guitar strings             |  703.25 |
+| 15-06-2024 | Entertainment  | Guitar strings             |  703.25 |
+| 08-05-2024 | Food           | KFC weekend treat          |  700.62 |
+| 24-06-2024 | Healthcare     | Pharmacy - fever meds      |  590.69 |
+| 28-06-2024 | Transportation | Ola outstation             |  583.09 |
+| 29-06-2024 | Healthcare     | General physician visit    |  567.47 |
+| 22-04-2024 | Entertainment  | Stand-up comedy            |  537.78 |
+| 07-02-2024 | Healthcare     | Counselling session        |  484.70 |
+| 02-06-2024 | Transportation | TNSTC bus fare             |  476.34 |
+| 24-05-2024 | Transportation | Tyre puncture repair       |  420.99 |
+| 01-01-2024 | Food           | Dabba from mess            |  417.19 |
+| 28-03-2024 | Entertainment  | SPI Sathyam Tamil film     |  395.89 |
+| 22-06-2024 | Transportation | College parking - month    |  358.03 |
+| 29-03-2024 | Healthcare     | Health insurance premium   |  319.83 |
+| 14-01-2024 | Transportation | College parking  month     |  310.94 |
+| 22-06-2024 | Food           | Zomato order - Biryani     |  305.85 |
+| 09-05-2024 | Healthcare     | Stress-relief workshop     |  253.97 |
+| 15-06-2024 | Healthcare     | Stress-relief workshop     |  253.97 |
+| 05-06-2024 | Entertainment  | Stand-up comedy            |  204.65 |
+| 18-04-2024 | Transportation | Rapido bike ride           |  169.82 |
+| 26-06-2024 | Transportation | Bike service - TVS         |  169.71 |
+| 01-01-2024 | Transportation | Fuel refill  bike          |  104.41 |
+| 02-04-2024 | Healthcare     | Two-wheeler insurance      |  100.44 |
+| 24-02-2024 | Transportation | Petrol for road trip       |   69.63 |
+| 26-04-2024 | Food           | Murukku packet             |   60.98 |
+| 18-01-2024 | Miscellaneous  | Unexpected repair          |   57.08 |
+| 04-01-2024 | Transportation | Rapido bike ride           |   52.46 |
++------------+----------------+----------------------------+---------+
+44 rows in set (0.00 sec)
+
+mysql> SELECT Month, SUM(Amount) AS Total_Spend
+    -> FROM student_budget
+    -> GROUP BY Month
+    -> ORDER BY FIELD(Month,
+    -> 'January',
+    -> 'February',
+    -> 'March',
+    -> 'April',
+    -> 'May',
+    -> 'June');
++-----------+-------------+
+| Month     | Total_Spend |
++-----------+-------------+
+  |    32727.32 |
+ |    43336.08 |
+    |    68483.00 |
+    |    46461.67 |
+      |    52283.01 |
+     |    52157.96 |
++-----------+-------------+
+6 rows in set (0.01 sec)
+
+mysql> SELECT DISTINCT CONCAT('[', Month, ']')
+    -> FROM student_budget;
++-------------------------+
+| CONCAT('[', Month, ']') |
++-------------------------+
+]              |
+]             |
+]                |
+]                |
+]                  |
+]                 |
++-------------------------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT Month, LENGTH(Month)
+    -> FROM student_budget
+    -> LIMIT 10;
++----------+---------------+
+| Month    | LENGTH(Month) |
++----------+---------------+
+ |             8 |
+ |             8 |
+ |             8 |
+ |             8 |
+ |             8 |
+ |             8 |
+ |             8 |
+ |             8 |
+ |             8 |
+ |             8 |
++----------+---------------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT HEX(Month), LENGTH(Month)
+    -> FROM student_budget
+    -> LIMIT 10;
++------------------+---------------+
+| HEX(Month)       | LENGTH(Month) |
++------------------+---------------+
+| 4A616E756172790D |             8 |
+| 4A616E756172790D |             8 |
+| 4A616E756172790D |             8 |
+| 4A616E756172790D |             8 |
+| 4A616E756172790D |             8 |
+| 4A616E756172790D |             8 |
+| 4A616E756172790D |             8 |
+| 4A616E756172790D |             8 |
+| 4A616E756172790D |             8 |
+| 4A616E756172790D |             8 |
++------------------+---------------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT Month, HEX(Month)
+    -> FROM student_budget
+    -> LIMIT 5;
++----------+------------------+
+| Month    | HEX(Month)       |
++----------+------------------+
+ | 4A616E756172790D |
+ | 4A616E756172790D |
+ | 4A616E756172790D |
+ | 4A616E756172790D |
+ | 4A616E756172790D |
++----------+------------------+
+5 rows in set (0.00 sec)
+
+mysql> UPDATE student_budget
+    -> SET Month = REPLACE(Month, CHAR(13), '');
+Query OK, 200 rows affected (0.02 sec)
+Rows matched: 200  Changed: 200  Warnings: 0
+
+mysql> SELECT DISTINCT HEX(Month)
+    -> FROM student_budget;
++------------------+
+| HEX(Month)       |
++------------------+
+| 4A616E75617279   |
+| 4665627275617279 |
+| 4D61726368       |
+| 417072696C       |
+| 4D6179           |
+| 4A756E65         |
++------------------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT Month, SUM(Amount) AS Total_Spend
+    -> FROM student_budget
+    -> GROUP BY Month
+    -> ORDER BY FIELD(
+    ->     Month,
+    ->     'January',
+    ->     'February',
+    ->     'March',
+    ->     'April',
+    ->     'May',
+    ->     'June'
+    -> );
++----------+-------------+
+| Month    | Total_Spend |
++----------+-------------+
+| January  |    32727.32 |
+| February |    43336.08 |
+| March    |    68483.00 |
+| April    |    46461.67 |
+| May      |    52283.01 |
+| June     |    52157.96 |
++----------+-------------+
+6 rows in set (0.00 sec)
+
+mysql> select month, sum(amount) as total_spend
+    -> from student_budget
+    -> group by month
+    -> order by field(
+    ->     month,
+    ->     'January',
+    ->     'February',
+    ->     'March',
+    ->     'April',
+    ->     'May',
+    ->     'June')
+    -> ;
++----------+-------------+
+| month    | total_spend |
++----------+-------------+
+| January  |    32727.32 |
+| February |    43336.08 |
+| March    |    68483.00 |
+| April    |    46461.67 |
+| May      |    52283.01 |
+| June     |    52157.96 |
++----------+-------------+
+6 rows in set (0.00 sec)
+
+mysql> select category , sum(amount) from student_budget group by category having sum(amount) > 10000;
++---------------+-------------+
+| category      | sum(amount) |
++---------------+-------------+
+| Shopping      |    39483.87 |
+| Miscellaneous |    73543.25 |
+| Healthcare    |    25444.02 |
+| Education     |    32891.28 |
+| Entertainment |    15289.76 |
+| Bills         |    95972.45 |
++---------------+-------------+
+6 rows in set (0.00 sec)
+
+mysql> Select payment_method, count(*), sum(amount),avg(amount) from student_budget group by payment_method order by sum(amount) desc;
++----------------+----------+-------------+-------------+
+| payment_method | count(*) | sum(amount) | avg(amount) |
++----------------+----------+-------------+-------------+
+| Debit Card     |       47 |    72958.47 | 1552.307872 |
+| UPI            |       45 |    68495.66 | 1522.125778 |
+| Credit Card    |       39 |    50593.52 | 1297.269744 |
+| Net Banking    |       20 |    44304.35 | 2215.217500 |
+| Cash           |       44 |    43158.07 |  980.865227 |
+| Auto-debit     |        5 |    15938.97 | 3187.794000 |
++----------------+----------+-------------+-------------+
+6 rows in set (0.00 sec)
+
+mysql> select description, category , amount case when amount < 500 then “Low” when amount <= 2000 then “Mid” else “High” end as spend_tier from student_budget;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'case when amount < 500 then ?Low? when amount <= 2000 then ?Mid? else ?High? end' at line 1
+mysql> select description, category , amount, case when amount < 500 then “Low” when amount <= 2000 then “Mid” else “High” end as spend_tier from student_budget;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?Low? when amount <= 2000 then ?Mid? else ?High? end as spend_tier from student_' at line 1
+mysql> select description, category , amount, case when amount < 500 then 'Low' when amount <= 2000 then 'Mid' else 'High' end as spend_tier from student_budget;
++------------------------------+----------------+---------+------------+
+| description                  | category       | amount  | spend_tier |
++------------------------------+----------------+---------+------------+
+| Nykaa skincare order         | Shopping       | 1097.90 | Mid        |
+| Train ticket  home           | Miscellaneous  | 3888.11 | High       |
+| Fuel refill  bike            | Transportation |  104.41 | Low        |
+| Protein powder top-up        | Food           |  406.23 | Low        |
+| Counselling session          | Healthcare     |  162.95 | Low        |
+| Bike service  TVS            | Transportation |  587.12 | Mid        |
+| Printer paper                | Education      | 2843.20 | High       |
+| Farewell gift pooling        | Shopping       | 3378.83 | High       |
+| Extension cord               | Shopping       | 1589.54 | Mid        |
+| Rapido bike ride             | Transportation |   52.46 | Low        |
+| Cricket bat purchase         | Entertainment  |   60.43 | Low        |
+| PVR Cinemas  Avengers        | Entertainment  | 1296.47 | Mid        |
+| Disney+ Hotstar              | Entertainment  |  360.64 | Low        |
+| Friend crowdfund             | Miscellaneous  | 3233.84 | High       |
+| MTC season ticket            | Transportation |  222.26 | Low        |
+| Weekend trip  Pondicherry    | Miscellaneous  |  261.24 | Low        |
+| Rapido bike ride             | Transportation |  126.27 | Low        |
+| Gate exam form               | Education      |  871.71 | Mid        |
+| Bike service  TVS            | Transportation |   44.59 | Low        |
+| Big Basket order             | Food           |  158.06 | Low        |
+| Friend crowdfund             | Miscellaneous  | 3611.72 | High       |
+| Airtel postpaid bill         | Bills          | 1738.18 | Mid        |
+| Bedsheet  Pepperfry          | Shopping       |  626.31 | Mid        |
+| PVR Cinemas Avengers         | Entertainment  | 1134.56 | Mid        |
+| Dabba from mess              | Food           |  417.19 | Low        |
+| Tiffin service  monthly      | Food           |  685.53 | Mid        |
+| Auto fare  hospital          | Transportation |   85.13 | Low        |
+| Badminton court booking      | Entertainment  |  948.10 | Mid        |
+| Counselling session          | Healthcare     | 1355.97 | Mid        |
+| Disney+ Hotstar              | Entertainment  |  239.77 | Low        |
+| Unexpected repair            | Miscellaneous  |   57.08 | Low        |
+| College parking  month       | Transportation |  310.94 | Low        |
+| General physician visit      | Healthcare     |  770.58 | Mid        |
+| Vending machine              | Miscellaneous  | 2454.48 | High       |
+| H&M T-shirts                 | Shopping       |  999.18 | Mid        |
+| NPTEL exam fee               | Education      | 1834.25 | Mid        |
+| JioSaavn                     | Entertainment  |  758.37 | Mid        |
+| Oil change                   | Transportation |   40.79 | Low        |
+| Udemy course Python          | Education      | 2236.63 | High       |
+| Reliance Smart Bazaar        | Food           |  757.69 | Mid        |
+| Murukku packet               | Food           |  455.44 | Low        |
+| Lab fee payment              | Education      | 1125.72 | Mid        |
+| Vitamin D supplements        | Healthcare     | 1350.52 | Mid        |
+| Notion Pro plan              | Bills          | 1096.41 | Mid        |
+| Printer paper                | Education      |  123.12 | Low        |
+| BSNL broadband               | Bills          | 1123.35 | Mid        |
+| Airtel postpaid bill         | Bills          | 1490.12 | Mid        |
+| Counselling session          | Healthcare     |  484.70 | Low        |
+| Electricity PG room          | Bills          | 5213.25 | High       |
+| Two-wheeler insurance        | Healthcare     | 1375.06 | Mid        |
+| Nilgiris dairy run           | Food           |  167.50 | Low        |
+| Spencer's weekly shop        | Food           |  364.61 | Low        |
+| Notion Pro plan              | Bills          |  870.75 | Mid        |
+| College fest outfit          | Shopping       |  105.75 | Low        |
+| Cult.fit monthly pass        | Healthcare     | 1900.31 | Mid        |
+| Dentist check-up             | Healthcare     | 1038.89 | Mid        |
+| Yoga class                   | Healthcare     | 1131.10 | Mid        |
+| Shared apartment share       | Bills          | 4539.18 | High       |
+| Detergent & soap             | Shopping       | 1133.17 | Mid        |
+| Notion Pro plan              | Bills          | 3997.29 | High       |
+| Spiral binding               | Miscellaneous  | 2054.47 | High       |
+| Petrol for road trip         | Transportation |   69.63 | Low        |
+| Zebronics mouse              | Shopping       |  601.00 | Mid        |
+| College fest tickets         | Entertainment  |  710.35 | Mid        |
+| Hostel room rent             | Bills          | 1615.11 | Mid        |
+| Tyre puncture repair         | Transportation |  117.89 | Low        |
+| Kodaikanal road trip share   | Miscellaneous  | 3671.53 | High       |
+| Friend crowdfund             | Miscellaneous  | 2676.96 | High       |
+| Random online purchase       | Miscellaneous  | 3325.67 | High       |
+| TCS iON test fee             | Education      |  814.62 | Mid        |
+| Farewell gift pooling        | Shopping       | 2230.94 | High       |
+| Train ticket home            | Miscellaneous  |  953.28 | Mid        |
+| Health insurance premium     | Healthcare     |  319.83 | Low        |
+| Wi-Fi router recharge        | Bills          | 1440.93 | Mid        |
+| Smart meter top-up           | Bills          | 2902.36 | High       |
+| Stand-up comedy              | Entertainment  | 1362.02 | Mid        |
+| PG accommodation fee         | Bills          | 5667.90 | High       |
+| Shared apartment  share      | Bills          | 4535.59 | High       |
+| Flood relief fund            | Miscellaneous  | 1754.63 | Mid        |
+| Smart meter top-up           | Bills          | 4139.02 | High       |
+| Gate exam form               | Education      | 2943.13 | High       |
+| Notion Pro plan              | Bills          | 4045.40 | High       |
+| BSNL broadband               | Bills          | 1254.03 | Mid        |
+| EB bill  hostel share        | Bills          | 2837.26 | High       |
+| Electricity PG room          | Bills          | 1663.17 | Mid        |
+| Weekend trip Pondicherry     | Miscellaneous  | 3999.63 | High       |
+| PVR Cinemas  Avengers        | Entertainment  | 1143.64 | Mid        |
+| SPI Sathyam Tamil film       | Entertainment  |  395.89 | Low        |
+| College parking  month       | Transportation |  287.04 | Low        |
+| Pharmacy fever meds          | Healthcare     | 1566.69 | Mid        |
+| Flipkart ethnic wear         | Shopping       |  187.31 | Low        |
+| Shared apartment  share      | Bills          | 1350.31 | Mid        |
+| Petrol  Honda Activa         | Transportation |  480.79 | Low        |
+| Murukku packet               | Food           |  359.85 | Low        |
+| Parking meter fee            | Transportation |  214.62 | Low        |
+| Flight  semester break       | Miscellaneous  | 3843.93 | High       |
+| Gate exam form               | Education      | 2214.70 | High       |
+| Ruler & geometry box         | Miscellaneous  | 3306.42 | High       |
+| Pharmacy  fever meds         | Healthcare     |  593.91 | Mid        |
+| Stand-up comedy              | Entertainment  |  537.78 | Mid        |
+| Protein supplements          | Healthcare     |  463.63 | Low        |
+| Stress-relief workshop       | Healthcare     | 1417.31 | Mid        |
+| Home cook ingredients        | Food           |   95.92 | Low        |
+| Bank charges                 | Miscellaneous  | 2768.63 | High       |
+| Weekend trip  Pondicherry    | Miscellaneous  | 1191.06 | Mid        |
+| JioSaavn                     | Entertainment  |  585.08 | Mid        |
+| iCloud storage 50GB          | Bills          | 2240.50 | High       |
+| The Ordinary serum           | Shopping       |  883.83 | Mid        |
+| General physician visit      | Healthcare     |  423.50 | Low        |
+| Wedding contribution         | Shopping       | 3433.74 | High       |
+| Pen drive Kingston           | Shopping       |  710.10 | Mid        |
+| Coursera subscription        | Education      | 2924.17 | High       |
+| Gate exam form               | Education      | 2624.52 | High       |
+| Ruler & geometry box         | Miscellaneous  | 1376.01 | Mid        |
+| Detergent & soap             | Shopping       | 2895.19 | High       |
+| Weekend trip Pondicherry     | Miscellaneous  |  623.87 | Mid        |
+| Ola cab  college             | Transportation |  341.47 | Low        |
+| Guitar strings               | Entertainment  |  703.25 | Mid        |
+| Farewell gift pooling        | Shopping       | 1138.29 | Mid        |
+| Rapido bike ride             | Transportation |  169.82 | Low        |
+| Higginbothams reference book | Education      | 1678.38 | Mid        |
+| Boost health drink           | Food           |  560.82 | Mid        |
+| H&M T-shirts                 | Shopping       | 1079.56 | Mid        |
+| Kodaikanal road trip share   | Miscellaneous  | 3697.17 | High       |
+| Vi recharge 28-day           | Bills          | 1503.89 | Mid        |
+| Boat earphones               | Shopping       |  302.77 | Low        |
+| Detergent & soap             | Shopping       | 1693.57 | Mid        |
+| Smart meter top-up           | Bills          | 3331.89 | High       |
+| College parking  month       | Transportation |  535.31 | Mid        |
+| Two-wheeler insurance        | Healthcare     |  100.44 | Low        |
+| Murukku packet               | Food           |   60.98 | Low        |
+| Random online purchase       | Miscellaneous  | 3665.97 | High       |
+| PG accommodation fee         | Bills          | 2926.06 | High       |
+| Stress-relief workshop       | Healthcare     |  253.97 | Low        |
+| Zumba session                | Healthcare     |  612.02 | Mid        |
+| Cafe latte Starbucks         | Food           |  272.18 | Low        |
+| Bike service  TVS            | Transportation |  399.73 | Low        |
+| Printing  assignment         | Miscellaneous  |  766.58 | Mid        |
+| Printing assignment          | Miscellaneous  |  830.16 | Mid        |
+| Bedsheet - Pepperfry         | Shopping       |  512.85 | Mid        |
+| Coursera subscription        | Education      | 1679.14 | Mid        |
+| Netflix DVD plan             | Entertainment  | 1423.24 | Mid        |
+| Emergency medicine           | Miscellaneous  | 1673.65 | Mid        |
+| Friend crowdfund             | Miscellaneous  | 2214.04 | High       |
+| Cricket bat purchase         | Entertainment  | 1302.84 | Mid        |
+| Smart meter top-up           | Bills          | 1749.60 | Mid        |
+| Sunscreen SPF 50             | Shopping       | 2071.74 | High       |
+| Aptitude test fee            | Education      | 1478.81 | Mid        |
+| Hostel room rent             | Bills          | 5243.69 | High       |
+| BSNL broadband               | Bills          |  453.15 | Low        |
+| Shared apartment- share      | Bills          | 4795.88 | High       |
+| Kodaikanal road trip share   | Miscellaneous  | 2019.12 | High       |
+| Bike service -TVS            | Transportation |  322.68 | Low        |
+| KFC weekend treat            | Food           |  700.62 | Mid        |
+| Oil change                   | Transportation |  213.06 | Low        |
+| Airtel postpaid bill         | Bills          | 5143.58 | High       |
+| Cult.fit monthly pass        | Healthcare     | 1254.05 | Mid        |
+| Boat earphones               | Shopping       | 1575.50 | Mid        |
+| Tyre puncture repair         | Transportation |  420.99 | Low        |
+| Haldiram's pack              | Food           |  255.89 | Low        |
+| ACT Fibernet monthly         | Bills          | 3280.76 | High       |
+| Amazon-textbook              | Education      | 1848.00 | Mid        |
+| Cultural show                | Entertainment  |  386.67 | Low        |
+| Unexpected repair            | Miscellaneous  | 3597.66 | High       |
+| Anniversary present          | Shopping       |  351.13 | Low        |
+| Extension cord               | Shopping       | 1653.24 | Mid        |
+| Stand-up comedy              | Entertainment  |  204.65 | Low        |
+| Two-wheeler insurance        | Healthcare     | 1985.75 | Mid        |
+| Tender coconut               | Food           |   36.24 | Low        |
+| Lost wallet replacement      | Miscellaneous  | 2436.12 | High       |
+| PlayStation Store            | Entertainment  | 1032.76 | Mid        |
+| TNSTC bus fare               | Transportation |  476.34 | Low        |
+| Pharmacy - fever meds        | Healthcare     | 1823.77 | Mid        |
+| ACT Fibernet monthly         | Bills          |  966.53 | Mid        |
+| Pen drive - Kingston         | Shopping       | 3207.77 | High       |
+| Nykaa skincare order         | Shopping       | 1692.33 | Mid        |
+| Printer paper                | Education      | 2903.45 | High       |
+| Bike service - TVS           | Transportation |  169.71 | Low        |
+| Emergency medicine           | Miscellaneous  | 2346.55 | High       |
+| Auto fare- hospital          | Transportation |   29.64 | Low        |
+| Health insurance premium     | Healthcare     | 1312.92 | Mid        |
+| Detergent & soap             | Shopping       |  575.24 | Mid        |
+| Detergent & soap             | Shopping       |  430.45 | Low        |
+| Hostel room rent             | Bills          | 4088.82 | High       |
+| Aptitude test fee            | Education      |  342.11 | Low        |
+| EB bill - hostel share       | Bills          | 4203.63 | High       |
+| Spiral binding               | Miscellaneous  | 3424.69 | High       |
+| Student accident cover       | Healthcare     |  749.41 | Mid        |
+| Boat earphones               | Shopping       | 3326.64 | High       |
+| Ola outstation               | Transportation |  583.09 | Mid        |
+| Vitamin D supplements        | Healthcare     | 1584.61 | Mid        |
+| College parking - month      | Transportation |  358.03 | Low        |
+| Pharmacy - fever meds        | Healthcare     |  590.69 | Mid        |
+| Coding bootcamp deposit      | Education      | 2405.62 | High       |
+| Zomato order - Biryani       | Food           |  305.85 | Low        |
+| General physician visit      | Healthcare     |  567.47 | Mid        |
+| Google One storage           | Bills          | 4524.86 | High       |
+| Unexpected repair            | Miscellaneous  | 1818.98 | Mid        |
+| Stress-relief workshop       | Healthcare     |  253.97 | Low        |
+| Guitar strings               | Entertainment  |  703.25 | Mid        |
++------------------------------+----------------+---------+------------+
+200 rows in set (0.00 sec)
+
+mysql> select month , sum(amount) from student_budget group by month having (sum(amount) > ( select avg(month_total) from ( select sum(amount) month_total from student_budget group by month) monthly_total;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> select month , sum(amount) as total_spend from student_budget group by month having sum(amount) > ( select avg(month_total) from ( select sum(amount) as month_total from student_budget group by month) as monthly_total);
++-------+-------------+
+| month | total_spend |
++-------+-------------+
+| March |    68483.00 |
+| May   |    52283.01 |
+| June  |    52157.96 |
++-------+-------------+
+3 rows in set (0.01 sec)
+
+mysql> select category , sum(case when expense_type= 'Need' then amount else 0 end) as Need_total,sum(case when expense_type = 'Want' then amount else 0 end ) as Want_total  from student_budget group by category;
++----------------+------------+------------+
+| category       | Need_total | Want_total |
++----------------+------------+------------+
+| Shopping       |   16855.36 |   22628.51 |
+| Miscellaneous  |   23688.37 |   49854.88 |
+| Transportation |    5375.93 |    1387.88 |
+| Food           |    5191.36 |     869.24 |
+| Healthcare     |   20546.54 |    4897.48 |
+| Education      |   30485.66 |    2405.62 |
+| Entertainment  |       0.00 |   15289.76 |
+| Bills          |   95972.45 |       0.00 |
++----------------+------------+------------+
+8 rows in set (0.00 sec)
+
+mysql> select subcategory , count(*) , avg(amount) from student_budget group by subcategory having count(*)>5 AND avg(amount) >1000;
++-----------------+----------+-------------+
+| subcategory     | count(*) | avg(amount) |
++-----------------+----------+-------------+
+| Travel          |       10 | 2414.894000 |
+| Home Essentials |        9 | 1234.395556 |
+| Subscriptions   |       10 | 1871.907000 |
+| Exam Fees       |        7 | 1612.800000 |
+| Emergency Fund  |        6 | 1988.340000 |
+| Medicines       |        7 | 1139.117143 |
+| Internet        |        6 | 1419.791667 |
+| Electricity     |        8 | 3255.022500 |
+| Rent            |        9 | 3862.504444 |
+| Stationery      |        6 | 1959.721667 |
+| Electronics     |        6 | 1620.630000 |
++-----------------+----------+-------------+
+11 rows in set (0.00 sec)
+
+mysql> select date,category,description from student_budget where payment_ method = 'Cash' and expense_type = 'Want' order by amount desc;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'method =select date,category,description from student_budget where payment_method = 'Cash' and expense_type = 'Want' order by amount desc;
++------------+----------------+----------------------------+
+| date       | category       | description                |
++------------+----------------+----------------------------+
+| 03-03-2024 | Miscellaneous  | Kodaikanal road trip share |
+| 18-06-2024 | Shopping       | Boat earphones             |
+| 05-06-2024 | Shopping       | Pen drive - Kingston       |
+| 15-02-2024 | Miscellaneous  | Vending machine            |
+| 03-03-2024 | Miscellaneous  | Flood relief fund          |
+| 18-05-2024 | Healthcare     | Cult.fit monthly pass      |
+| 12-02-2024 | Healthcare     | Yoga class                 |
+| 23-01-2024 | Entertainment  | Badminton court booking    |
+| 21-04-2024 | Entertainment  | Guitar strings             |
+| 15-06-2024 | Entertainment  | Guitar strings             |
+| 28-06-2024 | Transportation | Ola outstation             |
+| 22-04-2024 | Entertainment  | Stand-up comedy            |
+| 28-03-2024 | Entertainment  | SPI Sathyam Tamil film     |
+| 05-06-2024 | Entertainment  | Stand-up comedy            |
+| 18-04-2024 | Transportation | Rapido bike ride           |
+| 04-01-2024 | Transportation | Rapido bike ride           |
++------------+----------------+----------------------------+
+16 rows in set (0.00 sec)
+
+mysql> select month , sum(amount) from student_budget where category = 'Bills' group by month order by sum(amount) desc limit 1;
++-------+-------------+
+| month | sum(amount) |
++-------+-------------+
+| March |    29835.97 |
++-------+-------------+
+1 row in set (0.00 sec)
+
+mysql> select month, count(*) from student_budget where amount>3000 group by month;
++----------+----------+
+| month    | count(*) |
++----------+----------+
+| January  |        4 |
+| February |        3 |
+| March    |        9 |
+| April    |        4 |
+| May      |        5 |
+| June     |        6 |
++----------+----------+
+6 rows in set (0.01 sec)
+
+mysql> select category,description,amount ,row_number() over( partition by category order by amount desc ) from student_budget;
++----------------+------------------------------+---------+-----------------------------------------------------------------+
+| category       | description                  | amount  | row_number() over( partition by category order by amount desc ) |
++----------------+------------------------------+---------+-----------------------------------------------------------------+
+| Bills          | PG accommodation fee         | 5667.90 |                                                               1 |
+| Bills          | Hostel room rent             | 5243.69 |                                                               2 |
+| Bills          | Electricity PG room          | 5213.25 |                                                               3 |
+| Bills          | Airtel postpaid bill         | 5143.58 |                                                               4 |
+| Bills          | Shared apartment- share      | 4795.88 |                                                               5 |
+| Bills          | Shared apartment share       | 4539.18 |                                                               6 |
+| Bills          | Shared apartment  share      | 4535.59 |                                                               7 |
+| Bills          | Google One storage           | 4524.86 |                                                               8 |
+| Bills          | EB bill - hostel share       | 4203.63 |                                                               9 |
+| Bills          | Smart meter top-up           | 4139.02 |                                                              10 |
+| Bills          | Hostel room rent             | 4088.82 |                                                              11 |
+| Bills          | Notion Pro plan              | 4045.40 |                                                              12 |
+| Bills          | Notion Pro plan              | 3997.29 |                                                              13 |
+| Bills          | Smart meter top-up           | 3331.89 |                                                              14 |
+| Bills          | ACT Fibernet monthly         | 3280.76 |                                                              15 |
+| Bills          | PG accommodation fee         | 2926.06 |                                                              16 |
+| Bills          | Smart meter top-up           | 2902.36 |                                                              17 |
+| Bills          | EB bill  hostel share        | 2837.26 |                                                              18 |
+| Bills          | iCloud storage 50GB          | 2240.50 |                                                              19 |
+| Bills          | Smart meter top-up           | 1749.60 |                                                              20 |
+| Bills          | Airtel postpaid bill         | 1738.18 |                                                              21 |
+| Bills          | Electricity PG room          | 1663.17 |                                                              22 |
+| Bills          | Hostel room rent             | 1615.11 |                                                              23 |
+| Bills          | Vi recharge 28-day           | 1503.89 |                                                              24 |
+| Bills          | Airtel postpaid bill         | 1490.12 |                                                              25 |
+| Bills          | Wi-Fi router recharge        | 1440.93 |                                                              26 |
+| Bills          | Shared apartment  share      | 1350.31 |                                                              27 |
+| Bills          | BSNL broadband               | 1254.03 |                                                              28 |
+| Bills          | BSNL broadband               | 1123.35 |                                                              29 |
+| Bills          | Notion Pro plan              | 1096.41 |                                                              30 |
+| Bills          | ACT Fibernet monthly         |  966.53 |                                                              31 |
+| Bills          | Notion Pro plan              |  870.75 |                                                              32 |
+| Bills          | BSNL broadband               |  453.15 |                                                              33 |
+| Education      | Gate exam form               | 2943.13 |                                                               1 |
+| Education      | Coursera subscription        | 2924.17 |                                                               2 |
+| Education      | Printer paper                | 2903.45 |                                                               3 |
+| Education      | Printer paper                | 2843.20 |                                                               4 |
+| Education      | Gate exam form               | 2624.52 |                                                               5 |
+| Education      | Coding bootcamp deposit      | 2405.62 |                                                               6 |
+| Education      | Udemy course Python          | 2236.63 |                                                               7 |
+| Education      | Gate exam form               | 2214.70 |                                                               8 |
+| Education      | Amazon-textbook              | 1848.00 |                                                               9 |
+| Education      | NPTEL exam fee               | 1834.25 |                                                              10 |
+| Education      | Coursera subscription        | 1679.14 |                                                              11 |
+| Education      | Higginbothams reference book | 1678.38 |                                                              12 |
+| Education      | Aptitude test fee            | 1478.81 |                                                              13 |
+| Education      | Lab fee payment              | 1125.72 |                                                              14 |
+| Education      | Gate exam form               |  871.71 |                                                              15 |
+| Education      | TCS iON test fee             |  814.62 |                                                              16 |
+| Education      | Aptitude test fee            |  342.11 |                                                              17 |
+| Education      | Printer paper                |  123.12 |                                                              18 |
+| Entertainment  | Netflix DVD plan             | 1423.24 |                                                               1 |
+| Entertainment  | Stand-up comedy              | 1362.02 |                                                               2 |
+| Entertainment  | Cricket bat purchase         | 1302.84 |                                                               3 |
+| Entertainment  | PVR Cinemas  Avengers        | 1296.47 |                                                               4 |
+| Entertainment  | PVR Cinemas  Avengers        | 1143.64 |                                                               5 |
+| Entertainment  | PVR Cinemas Avengers         | 1134.56 |                                                               6 |
+| Entertainment  | PlayStation Store            | 1032.76 |                                                               7 |
+| Entertainment  | Badminton court booking      |  948.10 |                                                               8 |
+| Entertainment  | JioSaavn                     |  758.37 |                                                               9 |
+| Entertainment  | College fest tickets         |  710.35 |                                                              10 |
+| Entertainment  | Guitar strings               |  703.25 |                                                              11 |
+| Entertainment  | Guitar strings               |  703.25 |                                                              12 |
+| Entertainment  | JioSaavn                     |  585.08 |                                                              13 |
+| Entertainment  | Stand-up comedy              |  537.78 |                                                              14 |
+| Entertainment  | SPI Sathyam Tamil film       |  395.89 |                                                              15 |
+| Entertainment  | Cultural show                |  386.67 |                                                              16 |
+| Entertainment  | Disney+ Hotstar              |  360.64 |                                                              17 |
+| Entertainment  | Disney+ Hotstar              |  239.77 |                                                              18 |
+| Entertainment  | Stand-up comedy              |  204.65 |                                                              19 |
+| Entertainment  | Cricket bat purchase         |   60.43 |                                                              20 |
+| Food           | Reliance Smart Bazaar        |  757.69 |                                                               1 |
+| Food           | KFC weekend treat            |  700.62 |                                                               2 |
+| Food           | Tiffin service  monthly      |  685.53 |                                                               3 |
+| Food           | Boost health drink           |  560.82 |                                                               4 |
+| Food           | Murukku packet               |  455.44 |                                                               5 |
+| Food           | Dabba from mess              |  417.19 |                                                               6 |
+| Food           | Protein powder top-up        |  406.23 |                                                               7 |
+| Food           | Spencer's weekly shop        |  364.61 |                                                               8 |
+| Food           | Murukku packet               |  359.85 |                                                               9 |
+| Food           | Zomato order - Biryani       |  305.85 |                                                              10 |
+| Food           | Cafe latte Starbucks         |  272.18 |                                                              11 |
+| Food           | Haldiram's pack              |  255.89 |                                                              12 |
+| Food           | Nilgiris dairy run           |  167.50 |                                                              13 |
+| Food           | Big Basket order             |  158.06 |                                                              14 |
+| Food           | Home cook ingredients        |   95.92 |                                                              15 |
+| Food           | Murukku packet               |   60.98 |                                                              16 |
+| Food           | Tender coconut               |   36.24 |                                                              17 |
+| Healthcare     | Two-wheeler insurance        | 1985.75 |                                                               1 |
+| Healthcare     | Cult.fit monthly pass        | 1900.31 |                                                               2 |
+| Healthcare     | Pharmacy - fever meds        | 1823.77 |                                                               3 |
+| Healthcare     | Vitamin D supplements        | 1584.61 |                                                               4 |
+| Healthcare     | Pharmacy fever meds          | 1566.69 |                                                               5 |
+| Healthcare     | Stress-relief workshop       | 1417.31 |                                                               6 |
+| Healthcare     | Two-wheeler insurance        | 1375.06 |                                                               7 |
+| Healthcare     | Counselling session          | 1355.97 |                                                               8 |
+| Healthcare     | Vitamin D supplements        | 1350.52 |                                                               9 |
+| Healthcare     | Health insurance premium     | 1312.92 |                                                              10 |
+| Healthcare     | Cult.fit monthly pass        | 1254.05 |                                                              11 |
+| Healthcare     | Yoga class                   | 1131.10 |                                                              12 |
+| Healthcare     | Dentist check-up             | 1038.89 |                                                              13 |
+| Healthcare     | General physician visit      |  770.58 |                                                              14 |
+| Healthcare     | Student accident cover       |  749.41 |                                                              15 |
+| Healthcare     | Zumba session                |  612.02 |                                                              16 |
+| Healthcare     | Pharmacy  fever meds         |  593.91 |                                                              17 |
+| Healthcare     | Pharmacy - fever meds        |  590.69 |                                                              18 |
+| Healthcare     | General physician visit      |  567.47 |                                                              19 |
+| Healthcare     | Counselling session          |  484.70 |                                                              20 |
+| Healthcare     | Protein supplements          |  463.63 |                                                              21 |
+| Healthcare     | General physician visit      |  423.50 |                                                              22 |
+| Healthcare     | Health insurance premium     |  319.83 |                                                              23 |
+| Healthcare     | Stress-relief workshop       |  253.97 |                                                              24 |
+| Healthcare     | Stress-relief workshop       |  253.97 |                                                              25 |
+| Healthcare     | Counselling session          |  162.95 |                                                              26 |
+| Healthcare     | Two-wheeler insurance        |  100.44 |                                                              27 |
+| Miscellaneous  | Weekend trip Pondicherry     | 3999.63 |                                                               1 |
+| Miscellaneous  | Train ticket  home           | 3888.11 |                                                               2 |
+| Miscellaneous  | Flight  semester break       | 3843.93 |                                                               3 |
+| Miscellaneous  | Kodaikanal road trip share   | 3697.17 |                                                               4 |
+| Miscellaneous  | Kodaikanal road trip share   | 3671.53 |                                                               5 |
+| Miscellaneous  | Random online purchase       | 3665.97 |                                                               6 |
+| Miscellaneous  | Friend crowdfund             | 3611.72 |                                                               7 |
+| Miscellaneous  | Unexpected repair            | 3597.66 |                                                               8 |
+| Miscellaneous  | Spiral binding               | 3424.69 |                                                               9 |
+| Miscellaneous  | Random online purchase       | 3325.67 |                                                              10 |
+| Miscellaneous  | Ruler & geometry box         | 3306.42 |                                                              11 |
+| Miscellaneous  | Friend crowdfund             | 3233.84 |                                                              12 |
+| Miscellaneous  | Bank charges                 | 2768.63 |                                                              13 |
+| Miscellaneous  | Friend crowdfund             | 2676.96 |                                                              14 |
+| Miscellaneous  | Vending machine              | 2454.48 |                                                              15 |
+| Miscellaneous  | Lost wallet replacement      | 2436.12 |                                                              16 |
+| Miscellaneous  | Emergency medicine           | 2346.55 |                                                              17 |
+| Miscellaneous  | Friend crowdfund             | 2214.04 |                                                              18 |
+| Miscellaneous  | Spiral binding               | 2054.47 |                                                              19 |
+| Miscellaneous  | Kodaikanal road trip share   | 2019.12 |                                                              20 |
+| Miscellaneous  | Unexpected repair            | 1818.98 |                                                              21 |
+| Miscellaneous  | Flood relief fund            | 1754.63 |                                                              22 |
+| Miscellaneous  | Emergency medicine           | 1673.65 |                                                              23 |
+| Miscellaneous  | Ruler & geometry box         | 1376.01 |                                                              24 |
+| Miscellaneous  | Weekend trip  Pondicherry    | 1191.06 |                                                              25 |
+| Miscellaneous  | Train ticket home            |  953.28 |                                                              26 |
+| Miscellaneous  | Printing assignment          |  830.16 |                                                              27 |
+| Miscellaneous  | Printing  assignment         |  766.58 |                                                              28 |
+| Miscellaneous  | Weekend trip Pondicherry     |  623.87 |                                                              29 |
+| Miscellaneous  | Weekend trip  Pondicherry    |  261.24 |                                                              30 |
+| Miscellaneous  | Unexpected repair            |   57.08 |                                                              31 |
+| Shopping       | Wedding contribution         | 3433.74 |                                                               1 |
+| Shopping       | Farewell gift pooling        | 3378.83 |                                                               2 |
+| Shopping       | Boat earphones               | 3326.64 |                                                               3 |
+| Shopping       | Pen drive - Kingston         | 3207.77 |                                                               4 |
+| Shopping       | Detergent & soap             | 2895.19 |                                                               5 |
+| Shopping       | Farewell gift pooling        | 2230.94 |                                                               6 |
+| Shopping       | Sunscreen SPF 50             | 2071.74 |                                                               7 |
+| Shopping       | Detergent & soap             | 1693.57 |                                                               8 |
+| Shopping       | Nykaa skincare order         | 1692.33 |                                                               9 |
+| Shopping       | Extension cord               | 1653.24 |                                                              10 |
+| Shopping       | Extension cord               | 1589.54 |                                                              11 |
+| Shopping       | Boat earphones               | 1575.50 |                                                              12 |
+| Shopping       | Farewell gift pooling        | 1138.29 |                                                              13 |
+| Shopping       | Detergent & soap             | 1133.17 |                                                              14 |
+| Shopping       | Nykaa skincare order         | 1097.90 |                                                              15 |
+| Shopping       | H&M T-shirts                 | 1079.56 |                                                              16 |
+| Shopping       | H&M T-shirts                 |  999.18 |                                                              17 |
+| Shopping       | The Ordinary serum           |  883.83 |                                                              18 |
+| Shopping       | Pen drive Kingston           |  710.10 |                                                              19 |
+| Shopping       | Bedsheet  Pepperfry          |  626.31 |                                                              20 |
+| Shopping       | Zebronics mouse              |  601.00 |                                                              21 |
+| Shopping       | Detergent & soap             |  575.24 |                                                              22 |
+| Shopping       | Bedsheet - Pepperfry         |  512.85 |                                                              23 |
+| Shopping       | Detergent & soap             |  430.45 |                                                              24 |
+| Shopping       | Anniversary present          |  351.13 |                                                              25 |
+| Shopping       | Boat earphones               |  302.77 |                                                              26 |
+| Shopping       | Flipkart ethnic wear         |  187.31 |                                                              27 |
+| Shopping       | College fest outfit          |  105.75 |                                                              28 |
+| Transportation | Bike service  TVS            |  587.12 |                                                               1 |
+| Transportation | Ola outstation               |  583.09 |                                                               2 |
+| Transportation | College parking  month       |  535.31 |                                                               3 |
+| Transportation | Petrol  Honda Activa         |  480.79 |                                                               4 |
+| Transportation | TNSTC bus fare               |  476.34 |                                                               5 |
+| Transportation | Tyre puncture repair         |  420.99 |                                                               6 |
+| Transportation | Bike service  TVS            |  399.73 |                                                               7 |
+| Transportation | College parking - month      |  358.03 |                                                               8 |
+| Transportation | Ola cab  college             |  341.47 |                                                               9 |
+| Transportation | Bike service -TVS            |  322.68 |                                                              10 |
+| Transportation | College parking  month       |  310.94 |                                                              11 |
+| Transportation | College parking  month       |  287.04 |                                                              12 |
+| Transportation | MTC season ticket            |  222.26 |                                                              13 |
+| Transportation | Parking meter fee            |  214.62 |                                                              14 |
+| Transportation | Oil change                   |  213.06 |                                                              15 |
+| Transportation | Rapido bike ride             |  169.82 |                                                              16 |
+| Transportation | Bike service - TVS           |  169.71 |                                                              17 |
+| Transportation | Rapido bike ride             |  126.27 |                                                              18 |
+| Transportation | Tyre puncture repair         |  117.89 |                                                              19 |
+| Transportation | Fuel refill  bike            |  104.41 |                                                              20 |
+| Transportation | Auto fare  hospital          |   85.13 |                                                              21 |
+| Transportation | Petrol for road trip         |   69.63 |                                                              22 |
+| Transportation | Rapido bike ride             |   52.46 |                                                              23 |
+| Transportation | Bike service  TVS            |   44.59 |                                                              24 |
+| Transportation | Oil change                   |   40.79 |                                                              25 |
+| Transportation | Auto fare- hospital          |   29.64 |                                                              26 |
++----------------+------------------------------+---------+-----------------------------------------------------------------+
+200 rows in set (0.02 sec)
+
+mysql> select category, description , amount from ( select category , description , amount , row_number() ( over( partition by category order by amount desc ) as rn from student_budget) t where rn =1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '( over( partition by category order by amount desc ) as rn from student_budget) ' at line 1
+mysql> select category, description , amount from ( select category , description , amount , row_number() over( partition by category order by amount desc ) as rn from student_budget) t where rn =1;
++----------------+--------------------------+---------+
+| category       | description              | amount  |
++----------------+--------------------------+---------+
+| Bills          | PG accommodation fee     | 5667.90 |
+| Education      | Gate exam form           | 2943.13 |
+| Entertainment  | Netflix DVD plan         | 1423.24 |
+| Food           | Reliance Smart Bazaar    |  757.69 |
+| Healthcare     | Two-wheeler insurance    | 1985.75 |
+| Miscellaneous  | Weekend trip Pondicherry | 3999.63 |
+| Shopping       | Wedding contribution     | 3433.74 |
+| Transportation | Bike service  TVS        |  587.12 |
++----------------+--------------------------+---------+
+8 rows in set (0.00 sec)
+
+mysql> select date, description, amount, sum(amount) over(order by str_to_date(date,'%d-%m-%Y')) as running_total from student_budget;
++------------+------------------------------+---------+---------------+
+| date       | description                  | amount  | running_total |
++------------+------------------------------+---------+---------------+
+| 01-01-2024 | Fuel refill  bike            |  104.41 |        566.19 |
+| 01-01-2024 | Bike service  TVS            |   44.59 |        566.19 |
+| 01-01-2024 | Dabba from mess              |  417.19 |        566.19 |
+| 02-01-2024 | Gate exam form               |  871.71 |       1437.90 |
+| 03-01-2024 | MTC season ticket            |  222.26 |       1818.22 |
+| 03-01-2024 | Big Basket order             |  158.06 |       1818.22 |
+| 04-01-2024 | Train ticket  home           | 3888.11 |       5758.79 |
+| 04-01-2024 | Rapido bike ride             |   52.46 |       5758.79 |
+| 05-01-2024 | Farewell gift pooling        | 3378.83 |       9137.62 |
+| 07-01-2024 | Friend crowdfund             | 3611.72 |      12834.47 |
+| 07-01-2024 | Auto fare  hospital          |   85.13 |      12834.47 |
+| 08-01-2024 | Bike service  TVS            |  587.12 |      18773.55 |
+| 08-01-2024 | Printer paper                | 2843.20 |      18773.55 |
+| 08-01-2024 | Airtel postpaid bill         | 1738.18 |      18773.55 |
+| 08-01-2024 | General physician visit      |  770.58 |      18773.55 |
+| 09-01-2024 | Counselling session          |  162.95 |      18936.50 |
+| 14-01-2024 | Rapido bike ride             |  126.27 |      19373.71 |
+| 14-01-2024 | College parking  month       |  310.94 |      19373.71 |
+| 17-01-2024 | Bedsheet  Pepperfry          |  626.31 |      20000.02 |
+| 18-01-2024 | Friend crowdfund             | 3233.84 |      23976.47 |
+| 18-01-2024 | Tiffin service  monthly      |  685.53 |      23976.47 |
+| 18-01-2024 | Unexpected repair            |   57.08 |      23976.47 |
+| 19-01-2024 | Weekend trip  Pondicherry    |  261.24 |      24237.71 |
+| 20-01-2024 | PVR Cinemas Avengers         | 1134.56 |      25372.27 |
+| 21-01-2024 | Nykaa skincare order         | 1097.90 |      27826.14 |
+| 21-01-2024 | Counselling session          | 1355.97 |      27826.14 |
+| 22-01-2024 | Cricket bat purchase         |   60.43 |      27886.57 |
+| 23-01-2024 | Badminton court booking      |  948.10 |      29074.44 |
+| 23-01-2024 | Disney+ Hotstar              |  239.77 |      29074.44 |
+| 24-01-2024 | Protein powder top-up        |  406.23 |      32366.68 |
+| 24-01-2024 | Extension cord               | 1589.54 |      32366.68 |
+| 24-01-2024 | PVR Cinemas  Avengers        | 1296.47 |      32366.68 |
+| 29-01-2024 | Disney+ Hotstar              |  360.64 |      32727.32 |
+| 01-02-2024 | Udemy course Python          | 2236.63 |      34963.95 |
+| 02-02-2024 | Spiral binding               | 2054.47 |      37018.42 |
+| 03-02-2024 | Spencer's weekly shop        |  364.61 |      37383.03 |
+| 04-02-2024 | Nilgiris dairy run           |  167.50 |      39271.39 |
+| 04-02-2024 | College fest outfit          |  105.75 |      39271.39 |
+| 04-02-2024 | Hostel room rent             | 1615.11 |      39271.39 |
+| 05-02-2024 | Airtel postpaid bill         | 1490.12 |      40761.51 |
+| 06-02-2024 | Lab fee payment              | 1125.72 |      41887.23 |
+| 07-02-2024 | Counselling session          |  484.70 |      42371.93 |
+| 09-02-2024 | NPTEL exam fee               | 1834.25 |      46462.70 |
+| 09-02-2024 | BSNL broadband               | 1123.35 |      46462.70 |
+| 09-02-2024 | Detergent & soap             | 1133.17 |      46462.70 |
+| 11-02-2024 | Printer paper                |  123.12 |      47960.88 |
+| 11-02-2024 | Two-wheeler insurance        | 1375.06 |      47960.88 |
+| 12-02-2024 | Cult.fit monthly pass        | 1900.31 |      50992.29 |
+| 12-02-2024 | Yoga class                   | 1131.10 |      50992.29 |
+| 13-02-2024 | Notion Pro plan              |  870.75 |      51980.93 |
+| 13-02-2024 | Tyre puncture repair         |  117.89 |      51980.93 |
+| 14-02-2024 | Notion Pro plan              | 1096.41 |      53077.34 |
+| 15-02-2024 | Vending machine              | 2454.48 |      56132.82 |
+| 15-02-2024 | Zebronics mouse              |  601.00 |      56132.82 |
+| 18-02-2024 | College fest tickets         |  710.35 |      56843.17 |
+| 19-02-2024 | H&M T-shirts                 |  999.18 |      57842.35 |
+| 20-02-2024 | Shared apartment share       | 4539.18 |      62381.53 |
+| 23-02-2024 | Vitamin D supplements        | 1350.52 |      63732.05 |
+| 24-02-2024 | Petrol for road trip         |   69.63 |      63801.68 |
+| 25-02-2024 | Reliance Smart Bazaar        |  757.69 |      69772.62 |
+| 25-02-2024 | Electricity PG room          | 5213.25 |      69772.62 |
+| 26-02-2024 | JioSaavn                     |  758.37 |      74983.72 |
+| 26-02-2024 | Murukku packet               |  455.44 |      74983.72 |
+| 26-02-2024 | Notion Pro plan              | 3997.29 |      74983.72 |
+| 28-02-2024 | Oil change                   |   40.79 |      76063.40 |
+| 28-02-2024 | Dentist check-up             | 1038.89 |      76063.40 |
+| 02-03-2024 | Smart meter top-up           | 4139.02 |      80202.42 |
+| 03-03-2024 | Kodaikanal road trip share   | 3671.53 |      87291.75 |
+| 03-03-2024 | Flood relief fund            | 1754.63 |      87291.75 |
+| 03-03-2024 | Electricity PG room          | 1663.17 |      87291.75 |
+| 04-03-2024 | College parking  month       |  287.04 |      87578.79 |
+| 06-03-2024 | Flight  semester break       | 3843.93 |      91422.72 |
+| 07-03-2024 | PG accommodation fee         | 5667.90 |      97684.53 |
+| 07-03-2024 | Pharmacy  fever meds         |  593.91 |      97684.53 |
+| 08-03-2024 | Notion Pro plan              | 4045.40 |     102873.57 |
+| 08-03-2024 | PVR Cinemas  Avengers        | 1143.64 |     102873.57 |
+| 09-03-2024 | Flipkart ethnic wear         |  187.31 |     103060.88 |
+| 10-03-2024 | Random online purchase       | 3325.67 |     109223.81 |
+| 10-03-2024 | EB bill  hostel share        | 2837.26 |     109223.81 |
+| 12-03-2024 | Smart meter top-up           | 2902.36 |     117861.91 |
+| 12-03-2024 | Parking meter fee            |  214.62 |     117861.91 |
+| 12-03-2024 | Gate exam form               | 2214.70 |     117861.91 |
+| 12-03-2024 | Ruler & geometry box         | 3306.42 |     117861.91 |
+| 13-03-2024 | Pharmacy fever meds          | 1566.69 |     119428.60 |
+| 15-03-2024 | Shared apartment  share      | 1350.31 |     120778.91 |
+| 18-03-2024 | Friend crowdfund             | 2676.96 |     123455.87 |
+| 19-03-2024 | Stand-up comedy              | 1362.02 |     124817.89 |
+| 20-03-2024 | Train ticket home            |  953.28 |     125771.17 |
+| 21-03-2024 | Farewell gift pooling        | 2230.94 |     128482.90 |
+| 21-03-2024 | Petrol  Honda Activa         |  480.79 |     128482.90 |
+| 22-03-2024 | Gate exam form               | 2943.13 |     131426.03 |
+| 23-03-2024 | Shared apartment  share      | 4535.59 |     135961.62 |
+| 25-03-2024 | BSNL broadband               | 1254.03 |     137215.65 |
+| 27-03-2024 | TCS iON test fee             |  814.62 |     138390.12 |
+| 27-03-2024 | Murukku packet               |  359.85 |     138390.12 |
+| 28-03-2024 | Wi-Fi router recharge        | 1440.93 |     144226.57 |
+| 28-03-2024 | Weekend trip Pondicherry     | 3999.63 |     144226.57 |
+| 28-03-2024 | SPI Sathyam Tamil film       |  395.89 |     144226.57 |
+| 29-03-2024 | Health insurance premium     |  319.83 |     144546.40 |
+| 02-04-2024 | Detergent & soap             | 1693.57 |     146340.41 |
+| 02-04-2024 | Two-wheeler insurance        |  100.44 |     146340.41 |
+| 03-04-2024 | JioSaavn                     |  585.08 |     146925.49 |
+| 06-04-2024 | General physician visit      |  423.50 |     149973.51 |
+| 06-04-2024 | Gate exam form               | 2624.52 |     149973.51 |
+| 08-04-2024 | Coursera subscription        | 2924.17 |     157907.95 |
+| 08-04-2024 | Higginbothams reference book | 1678.38 |     157907.95 |
+| 08-04-2024 | Smart meter top-up           | 3331.89 |     157907.95 |
+| 09-04-2024 | Protein supplements          |  463.63 |     158995.45 |
+| 09-04-2024 | Weekend trip Pondicherry     |  623.87 |     158995.45 |
+| 11-04-2024 | H&M T-shirts                 | 1079.56 |     163740.98 |
+| 11-04-2024 | Random online purchase       | 3665.97 |     163740.98 |
+| 13-04-2024 | Detergent & soap             | 2895.19 |     166636.17 |
+| 15-04-2024 | Ruler & geometry box         | 1376.01 |     168012.18 |
+| 18-04-2024 | Wedding contribution         | 3433.74 |     171615.74 |
+| 18-04-2024 | Rapido bike ride             |  169.82 |     171615.74 |
+| 20-04-2024 | iCloud storage 50GB          | 2240.50 |     173856.24 |
+| 21-04-2024 | Weekend trip  Pondicherry    | 1191.06 |     176634.38 |
+| 21-04-2024 | The Ordinary serum           |  883.83 |     176634.38 |
+| 21-04-2024 | Guitar strings               |  703.25 |     176634.38 |
+| 22-04-2024 | Stand-up comedy              |  537.78 |     180501.61 |
+| 22-04-2024 | Bank charges                 | 2768.63 |     180501.61 |
+| 22-04-2024 | Boost health drink           |  560.82 |     180501.61 |
+| 23-04-2024 | Stress-relief workshop       | 1417.31 |     183057.21 |
+| 23-04-2024 | Farewell gift pooling        | 1138.29 |     183057.21 |
+| 24-04-2024 | Pen drive Kingston           |  710.10 |     183767.31 |
+| 25-04-2024 | Vi recharge 28-day           | 1503.89 |     185573.97 |
+| 25-04-2024 | Boat earphones               |  302.77 |     185573.97 |
+| 26-04-2024 | Murukku packet               |   60.98 |     185634.95 |
+| 27-04-2024 | Kodaikanal road trip share   | 3697.17 |     189867.43 |
+| 27-04-2024 | College parking  month       |  535.31 |     189867.43 |
+| 30-04-2024 | Home cook ingredients        |   95.92 |     190304.82 |
+| 30-04-2024 | Ola cab  college             |  341.47 |     190304.82 |
+| 03-05-2024 | Zumba session                |  612.02 |     190916.84 |
+| 05-05-2024 | Shared apartment- share      | 4795.88 |     196035.40 |
+| 05-05-2024 | Bike service -TVS            |  322.68 |     196035.40 |
+| 07-05-2024 | Cafe latte Starbucks         |  272.18 |     197981.23 |
+| 07-05-2024 | Emergency medicine           | 1673.65 |     197981.23 |
+| 08-05-2024 | KFC weekend treat            |  700.62 |     198681.85 |
+| 09-05-2024 | Stress-relief workshop       |  253.97 |     202530.44 |
+| 09-05-2024 | Kodaikanal road trip share   | 2019.12 |     202530.44 |
+| 09-05-2024 | Boat earphones               | 1575.50 |     202530.44 |
+| 11-05-2024 | Netflix DVD plan             | 1423.24 |     203953.68 |
+| 12-05-2024 | Anniversary present          |  351.13 |     204304.81 |
+| 13-05-2024 | PG accommodation fee         | 2926.06 |     212578.13 |
+| 13-05-2024 | Smart meter top-up           | 1749.60 |     212578.13 |
+| 13-05-2024 | Unexpected repair            | 3597.66 |     212578.13 |
+| 14-05-2024 | ACT Fibernet monthly         | 3280.76 |     215858.89 |
+| 15-05-2024 | BSNL broadband               |  453.15 |     216312.04 |
+| 16-05-2024 | Cricket bat purchase         | 1302.84 |     217614.88 |
+| 18-05-2024 | Airtel postpaid bill         | 5143.58 |     224012.51 |
+| 18-05-2024 | Cult.fit monthly pass        | 1254.05 |     224012.51 |
+| 19-05-2024 | Printing assignment          |  830.16 |     225485.23 |
+| 19-05-2024 | Haldiram's pack              |  255.89 |     225485.23 |
+| 19-05-2024 | Cultural show                |  386.67 |     225485.23 |
+| 21-05-2024 | Friend crowdfund             | 2214.04 |     232942.96 |
+| 21-05-2024 | Hostel room rent             | 5243.69 |     232942.96 |
+| 23-05-2024 | Coursera subscription        | 1679.14 |     234622.10 |
+| 24-05-2024 | Oil change                   |  213.06 |     235256.15 |
+| 24-05-2024 | Tyre puncture repair         |  420.99 |     235256.15 |
+| 29-05-2024 | Bedsheet - Pepperfry         |  512.85 |     239688.74 |
+| 29-05-2024 | Sunscreen SPF 50             | 2071.74 |     239688.74 |
+| 29-05-2024 | Amazon-textbook              | 1848.00 |     239688.74 |
+| 30-05-2024 | Bike service  TVS            |  399.73 |     241567.28 |
+| 30-05-2024 | Aptitude test fee            | 1478.81 |     241567.28 |
+| 31-05-2024 | Printing  assignment         |  766.58 |     242333.86 |
+| 01-06-2024 | Vitamin D supplements        | 1584.61 |     243918.47 |
+| 02-06-2024 | TNSTC bus fare               |  476.34 |     244394.81 |
+| 03-06-2024 | Lost wallet replacement      | 2436.12 |     247406.17 |
+| 03-06-2024 | Detergent & soap             |  575.24 |     247406.17 |
+| 04-06-2024 | ACT Fibernet monthly         |  966.53 |     250778.32 |
+| 04-06-2024 | Coding bootcamp deposit      | 2405.62 |     250778.32 |
+| 05-06-2024 | Stand-up comedy              |  204.65 |     254190.74 |
+| 05-06-2024 | Pen drive - Kingston         | 3207.77 |     254190.74 |
+| 06-06-2024 | Printer paper                | 2903.45 |     257094.19 |
+| 08-06-2024 | Extension cord               | 1653.24 |     258747.43 |
+| 09-06-2024 | Student accident cover       |  749.41 |     259496.84 |
+| 13-06-2024 | Detergent & soap             |  430.45 |     264016.11 |
+| 13-06-2024 | Hostel room rent             | 4088.82 |     264016.11 |
+| 14-06-2024 | Auto fare- hospital          |   29.64 |     264045.75 |
+| 15-06-2024 | EB bill - hostel share       | 4203.63 |     269206.60 |
+| 15-06-2024 | Stress-relief workshop       |  253.97 |     269206.60 |
+| 15-06-2024 | Guitar strings               |  703.25 |     269206.60 |
+| 16-06-2024 | Tender coconut               |   36.24 |     269242.84 |
+| 17-06-2024 | Two-wheeler insurance        | 1985.75 |     274653.28 |
+| 17-06-2024 | Spiral binding               | 3424.69 |     274653.28 |
+| 18-06-2024 | Boat earphones               | 3326.64 |     282504.78 |
+| 18-06-2024 | Google One storage           | 4524.86 |     282504.78 |
+| 20-06-2024 | Health insurance premium     | 1312.92 |     284159.81 |
+| 20-06-2024 | Aptitude test fee            |  342.11 |     284159.81 |
+| 21-06-2024 | Nykaa skincare order         | 1692.33 |     285852.14 |
+| 22-06-2024 | Emergency medicine           | 2346.55 |     288862.57 |
+| 22-06-2024 | College parking - month      |  358.03 |     288862.57 |
+| 22-06-2024 | Zomato order - Biryani       |  305.85 |     288862.57 |
+| 24-06-2024 | Pharmacy - fever meds        |  590.69 |     289453.26 |
+| 25-06-2024 | PlayStation Store            | 1032.76 |     292305.00 |
+| 25-06-2024 | Unexpected repair            | 1818.98 |     292305.00 |
+| 26-06-2024 | Bike service - TVS           |  169.71 |     292474.71 |
+| 28-06-2024 | Pharmacy - fever meds        | 1823.77 |     294881.57 |
+| 28-06-2024 | Ola outstation               |  583.09 |     294881.57 |
+| 29-06-2024 | General physician visit      |  567.47 |     295449.04 |
++------------+------------------------------+---------+---------------+
+200 rows in set (0.01 sec)
+
+mysql> select month, total_spend, lag(total_spend) over(order by field(month,'January','February','March','April','May','June')) as previous_month_spend, total_spend - lag(total_spend) over(order by field(month,'January','February','March','April','May','June')) as difference from (select month, sum(amount) astotal_spend from student_budget group by month) t;
++----------+-------------+----------------------+------------+
+| month    | total_spend | previous_month_spend | difference |
++----------+-------------+----------------------+------------+
+| January  |    32727.32 |                 NULL |       NULL |
+| February |    43336.08 |             32727.32 |   10608.76 |
+| March    |    68483.00 |             43336.08 |   25146.92 |
+| April    |    46461.67 |             68483.00 |  -22021.33 |
+| May      |    52283.01 |             46461.67 |    5821.34 |
+| June     |    52157.96 |             52283.01 |    -125.05 |
++----------+-------------+----------------------+------------+
+6 rows in set (0.01 sec)
+
+mysql> select description, category, amount, percent_rank() over(order by amount) as percentile_rank from student_budget;
++------------------------------+----------------+---------+----------------------+
+| description                  | category       | amount  | percentile_rank      |
++------------------------------+----------------+---------+----------------------+
+| Auto fare- hospital          | Transportation |   29.64 |                    0 |
+| Tender coconut               | Food           |   36.24 | 0.005025125628140704 |
+| Oil change                   | Transportation |   40.79 | 0.010050251256281407 |
+| Bike service  TVS            | Transportation |   44.59 |  0.01507537688442211 |
+| Rapido bike ride             | Transportation |   52.46 | 0.020100502512562814 |
+| Unexpected repair            | Miscellaneous  |   57.08 |  0.02512562814070352 |
+| Cricket bat purchase         | Entertainment  |   60.43 |  0.03015075376884422 |
+| Murukku packet               | Food           |   60.98 | 0.035175879396984924 |
+| Petrol for road trip         | Transportation |   69.63 |  0.04020100502512563 |
+| Auto fare  hospital          | Transportation |   85.13 |  0.04522613065326633 |
+| Home cook ingredients        | Food           |   95.92 |  0.05025125628140704 |
+| Two-wheeler insurance        | Healthcare     |  100.44 |  0.05527638190954774 |
+| Fuel refill  bike            | Transportation |  104.41 |  0.06030150753768844 |
+| College fest outfit          | Shopping       |  105.75 |  0.06532663316582915 |
+| Tyre puncture repair         | Transportation |  117.89 |  0.07035175879396985 |
+| Printer paper                | Education      |  123.12 |  0.07537688442211055 |
+| Rapido bike ride             | Transportation |  126.27 |  0.08040201005025126 |
+| Big Basket order             | Food           |  158.06 |  0.08542713567839195 |
+| Counselling session          | Healthcare     |  162.95 |  0.09045226130653267 |
+| Nilgiris dairy run           | Food           |  167.50 |  0.09547738693467336 |
+| Bike service - TVS           | Transportation |  169.71 |  0.10050251256281408 |
+| Rapido bike ride             | Transportation |  169.82 |  0.10552763819095477 |
+| Flipkart ethnic wear         | Shopping       |  187.31 |  0.11055276381909548 |
+| Stand-up comedy              | Entertainment  |  204.65 |  0.11557788944723618 |
+| Oil change                   | Transportation |  213.06 |  0.12060301507537688 |
+| Parking meter fee            | Transportation |  214.62 |  0.12562814070351758 |
+| MTC season ticket            | Transportation |  222.26 |   0.1306532663316583 |
+| Disney+ Hotstar              | Entertainment  |  239.77 |    0.135678391959799 |
+| Stress-relief workshop       | Healthcare     |  253.97 |   0.1407035175879397 |
+| Stress-relief workshop       | Healthcare     |  253.97 |   0.1407035175879397 |
+| Haldiram's pack              | Food           |  255.89 |   0.1507537688442211 |
+| Weekend trip  Pondicherry    | Miscellaneous  |  261.24 |  0.15577889447236182 |
+| Cafe latte Starbucks         | Food           |  272.18 |  0.16080402010050251 |
+| College parking  month       | Transportation |  287.04 |   0.1658291457286432 |
+| Boat earphones               | Shopping       |  302.77 |   0.1708542713567839 |
+| Zomato order - Biryani       | Food           |  305.85 |  0.17587939698492464 |
+| College parking  month       | Transportation |  310.94 |  0.18090452261306533 |
+| Health insurance premium     | Healthcare     |  319.83 |  0.18592964824120603 |
+| Bike service -TVS            | Transportation |  322.68 |  0.19095477386934673 |
+| Ola cab  college             | Transportation |  341.47 |  0.19597989949748743 |
+| Aptitude test fee            | Education      |  342.11 |  0.20100502512562815 |
+| Anniversary present          | Shopping       |  351.13 |  0.20603015075376885 |
+| College parking - month      | Transportation |  358.03 |  0.21105527638190955 |
+| Murukku packet               | Food           |  359.85 |  0.21608040201005024 |
+| Disney+ Hotstar              | Entertainment  |  360.64 |  0.22110552763819097 |
+| Spencer's weekly shop        | Food           |  364.61 |  0.22613065326633167 |
+| Cultural show                | Entertainment  |  386.67 |  0.23115577889447236 |
+| SPI Sathyam Tamil film       | Entertainment  |  395.89 |  0.23618090452261306 |
+| Bike service  TVS            | Transportation |  399.73 |  0.24120603015075376 |
+| Protein powder top-up        | Food           |  406.23 |  0.24623115577889448 |
+| Dabba from mess              | Food           |  417.19 |  0.25125628140703515 |
+| Tyre puncture repair         | Transportation |  420.99 |   0.2562814070351759 |
+| General physician visit      | Healthcare     |  423.50 |   0.2613065326633166 |
+| Detergent & soap             | Shopping       |  430.45 |   0.2663316582914573 |
+| BSNL broadband               | Bills          |  453.15 |    0.271356783919598 |
+| Murukku packet               | Food           |  455.44 |  0.27638190954773867 |
+| Protein supplements          | Healthcare     |  463.63 |   0.2814070351758794 |
+| TNSTC bus fare               | Transportation |  476.34 |   0.2864321608040201 |
+| Petrol  Honda Activa         | Transportation |  480.79 |   0.2914572864321608 |
+| Counselling session          | Healthcare     |  484.70 |   0.2964824120603015 |
+| Bedsheet - Pepperfry         | Shopping       |  512.85 |   0.3015075376884422 |
+| College parking  month       | Transportation |  535.31 |   0.3065326633165829 |
+| Stand-up comedy              | Entertainment  |  537.78 |  0.31155778894472363 |
+| Boost health drink           | Food           |  560.82 |   0.3165829145728643 |
+| General physician visit      | Healthcare     |  567.47 |  0.32160804020100503 |
+| Detergent & soap             | Shopping       |  575.24 |  0.32663316582914576 |
+| Ola outstation               | Transportation |  583.09 |   0.3316582914572864 |
+| JioSaavn                     | Entertainment  |  585.08 |  0.33668341708542715 |
+| Bike service  TVS            | Transportation |  587.12 |   0.3417085427135678 |
+| Pharmacy - fever meds        | Healthcare     |  590.69 |  0.34673366834170855 |
+| Pharmacy  fever meds         | Healthcare     |  593.91 |  0.35175879396984927 |
+| Zebronics mouse              | Shopping       |  601.00 |  0.35678391959798994 |
+| Zumba session                | Healthcare     |  612.02 |  0.36180904522613067 |
+| Weekend trip Pondicherry     | Miscellaneous  |  623.87 |  0.36683417085427134 |
+| Bedsheet  Pepperfry          | Shopping       |  626.31 |  0.37185929648241206 |
+| Tiffin service  monthly      | Food           |  685.53 |   0.3768844221105528 |
+| KFC weekend treat            | Food           |  700.62 |  0.38190954773869346 |
+| Guitar strings               | Entertainment  |  703.25 |   0.3869346733668342 |
+| Guitar strings               | Entertainment  |  703.25 |   0.3869346733668342 |
+| Pen drive Kingston           | Shopping       |  710.10 |   0.3969849246231156 |
+| College fest tickets         | Entertainment  |  710.35 |   0.4020100502512563 |
+| Student accident cover       | Healthcare     |  749.41 |  0.40703517587939697 |
+| Reliance Smart Bazaar        | Food           |  757.69 |   0.4120603015075377 |
+| JioSaavn                     | Entertainment  |  758.37 |  0.41708542713567837 |
+| Printing  assignment         | Miscellaneous  |  766.58 |   0.4221105527638191 |
+| General physician visit      | Healthcare     |  770.58 |   0.4271356783919598 |
+| TCS iON test fee             | Education      |  814.62 |   0.4321608040201005 |
+| Printing assignment          | Miscellaneous  |  830.16 |   0.4371859296482412 |
+| Notion Pro plan              | Bills          |  870.75 |  0.44221105527638194 |
+| Gate exam form               | Education      |  871.71 |   0.4472361809045226 |
+| The Ordinary serum           | Shopping       |  883.83 |  0.45226130653266333 |
+| Badminton court booking      | Entertainment  |  948.10 |    0.457286432160804 |
+| Train ticket home            | Miscellaneous  |  953.28 |   0.4623115577889447 |
+| ACT Fibernet monthly         | Bills          |  966.53 |  0.46733668341708545 |
+| H&M T-shirts                 | Shopping       |  999.18 |   0.4723618090452261 |
+| PlayStation Store            | Entertainment  | 1032.76 |  0.47738693467336685 |
+| Dentist check-up             | Healthcare     | 1038.89 |   0.4824120603015075 |
+| H&M T-shirts                 | Shopping       | 1079.56 |  0.48743718592964824 |
+| Notion Pro plan              | Bills          | 1096.41 |  0.49246231155778897 |
+| Nykaa skincare order         | Shopping       | 1097.90 |  0.49748743718592964 |
+| BSNL broadband               | Bills          | 1123.35 |   0.5025125628140703 |
+| Lab fee payment              | Education      | 1125.72 |    0.507537688442211 |
+| Yoga class                   | Healthcare     | 1131.10 |   0.5125628140703518 |
+| Detergent & soap             | Shopping       | 1133.17 |   0.5175879396984925 |
+| PVR Cinemas Avengers         | Entertainment  | 1134.56 |   0.5226130653266332 |
+| Farewell gift pooling        | Shopping       | 1138.29 |   0.5276381909547738 |
+| PVR Cinemas  Avengers        | Entertainment  | 1143.64 |   0.5326633165829145 |
+| Weekend trip  Pondicherry    | Miscellaneous  | 1191.06 |   0.5376884422110553 |
+| BSNL broadband               | Bills          | 1254.03 |    0.542713567839196 |
+| Cult.fit monthly pass        | Healthcare     | 1254.05 |   0.5477386934673367 |
+| PVR Cinemas  Avengers        | Entertainment  | 1296.47 |   0.5527638190954773 |
+| Cricket bat purchase         | Entertainment  | 1302.84 |   0.5577889447236181 |
+| Health insurance premium     | Healthcare     | 1312.92 |   0.5628140703517588 |
+| Shared apartment  share      | Bills          | 1350.31 |   0.5678391959798995 |
+| Vitamin D supplements        | Healthcare     | 1350.52 |   0.5728643216080402 |
+| Counselling session          | Healthcare     | 1355.97 |   0.5778894472361809 |
+| Stand-up comedy              | Entertainment  | 1362.02 |   0.5829145728643216 |
+| Two-wheeler insurance        | Healthcare     | 1375.06 |   0.5879396984924623 |
+| Ruler & geometry box         | Miscellaneous  | 1376.01 |    0.592964824120603 |
+| Stress-relief workshop       | Healthcare     | 1417.31 |   0.5979899497487438 |
+| Netflix DVD plan             | Entertainment  | 1423.24 |   0.6030150753768844 |
+| Wi-Fi router recharge        | Bills          | 1440.93 |   0.6080402010050251 |
+| Aptitude test fee            | Education      | 1478.81 |   0.6130653266331658 |
+| Airtel postpaid bill         | Bills          | 1490.12 |   0.6180904522613065 |
+| Vi recharge 28-day           | Bills          | 1503.89 |   0.6231155778894473 |
+| Pharmacy fever meds          | Healthcare     | 1566.69 |    0.628140703517588 |
+| Boat earphones               | Shopping       | 1575.50 |   0.6331658291457286 |
+| Vitamin D supplements        | Healthcare     | 1584.61 |   0.6381909547738693 |
+| Extension cord               | Shopping       | 1589.54 |   0.6432160804020101 |
+| Hostel room rent             | Bills          | 1615.11 |   0.6482412060301508 |
+| Extension cord               | Shopping       | 1653.24 |   0.6532663316582915 |
+| Electricity PG room          | Bills          | 1663.17 |   0.6582914572864321 |
+| Emergency medicine           | Miscellaneous  | 1673.65 |   0.6633165829145728 |
+| Higginbothams reference book | Education      | 1678.38 |   0.6683417085427136 |
+| Coursera subscription        | Education      | 1679.14 |   0.6733668341708543 |
+| Nykaa skincare order         | Shopping       | 1692.33 |    0.678391959798995 |
+| Detergent & soap             | Shopping       | 1693.57 |   0.6834170854271356 |
+| Airtel postpaid bill         | Bills          | 1738.18 |   0.6884422110552764 |
+| Smart meter top-up           | Bills          | 1749.60 |   0.6934673366834171 |
+| Flood relief fund            | Miscellaneous  | 1754.63 |   0.6984924623115578 |
+| Unexpected repair            | Miscellaneous  | 1818.98 |   0.7035175879396985 |
+| Pharmacy - fever meds        | Healthcare     | 1823.77 |   0.7085427135678392 |
+| NPTEL exam fee               | Education      | 1834.25 |   0.7135678391959799 |
+| Amazon-textbook              | Education      | 1848.00 |   0.7185929648241206 |
+| Cult.fit monthly pass        | Healthcare     | 1900.31 |   0.7236180904522613 |
+| Two-wheeler insurance        | Healthcare     | 1985.75 |   0.7286432160804021 |
+| Kodaikanal road trip share   | Miscellaneous  | 2019.12 |   0.7336683417085427 |
+| Spiral binding               | Miscellaneous  | 2054.47 |   0.7386934673366834 |
+| Sunscreen SPF 50             | Shopping       | 2071.74 |   0.7437185929648241 |
+| Friend crowdfund             | Miscellaneous  | 2214.04 |   0.7487437185929648 |
+| Gate exam form               | Education      | 2214.70 |   0.7537688442211056 |
+| Farewell gift pooling        | Shopping       | 2230.94 |   0.7587939698492462 |
+| Udemy course Python          | Education      | 2236.63 |   0.7638190954773869 |
+| iCloud storage 50GB          | Bills          | 2240.50 |   0.7688442211055276 |
+| Emergency medicine           | Miscellaneous  | 2346.55 |   0.7738693467336684 |
+| Coding bootcamp deposit      | Education      | 2405.62 |   0.7788944723618091 |
+| Lost wallet replacement      | Miscellaneous  | 2436.12 |   0.7839195979899497 |
+| Vending machine              | Miscellaneous  | 2454.48 |   0.7889447236180904 |
+| Gate exam form               | Education      | 2624.52 |   0.7939698492462312 |
+| Friend crowdfund             | Miscellaneous  | 2676.96 |   0.7989949748743719 |
+| Bank charges                 | Miscellaneous  | 2768.63 |   0.8040201005025126 |
+| EB bill  hostel share        | Bills          | 2837.26 |   0.8090452261306532 |
+| Printer paper                | Education      | 2843.20 |   0.8140703517587939 |
+| Detergent & soap             | Shopping       | 2895.19 |   0.8190954773869347 |
+| Smart meter top-up           | Bills          | 2902.36 |   0.8241206030150754 |
+| Printer paper                | Education      | 2903.45 |   0.8291457286432161 |
+| Coursera subscription        | Education      | 2924.17 |   0.8341708542713567 |
+| PG accommodation fee         | Bills          | 2926.06 |   0.8391959798994975 |
+| Gate exam form               | Education      | 2943.13 |   0.8442211055276382 |
+| Pen drive - Kingston         | Shopping       | 3207.77 |   0.8492462311557789 |
+| Friend crowdfund             | Miscellaneous  | 3233.84 |   0.8542713567839196 |
+| ACT Fibernet monthly         | Bills          | 3280.76 |   0.8592964824120602 |
+| Ruler & geometry box         | Miscellaneous  | 3306.42 |    0.864321608040201 |
+| Random online purchase       | Miscellaneous  | 3325.67 |   0.8693467336683417 |
+| Boat earphones               | Shopping       | 3326.64 |   0.8743718592964824 |
+| Smart meter top-up           | Bills          | 3331.89 |   0.8793969849246231 |
+| Farewell gift pooling        | Shopping       | 3378.83 |   0.8844221105527639 |
+| Spiral binding               | Miscellaneous  | 3424.69 |   0.8894472361809045 |
+| Wedding contribution         | Shopping       | 3433.74 |   0.8944723618090452 |
+| Unexpected repair            | Miscellaneous  | 3597.66 |   0.8994974874371859 |
+| Friend crowdfund             | Miscellaneous  | 3611.72 |   0.9045226130653267 |
+| Random online purchase       | Miscellaneous  | 3665.97 |   0.9095477386934674 |
+| Kodaikanal road trip share   | Miscellaneous  | 3671.53 |    0.914572864321608 |
+| Kodaikanal road trip share   | Miscellaneous  | 3697.17 |   0.9195979899497487 |
+| Flight  semester break       | Miscellaneous  | 3843.93 |   0.9246231155778895 |
+| Train ticket  home           | Miscellaneous  | 3888.11 |   0.9296482412060302 |
+| Notion Pro plan              | Bills          | 3997.29 |   0.9346733668341709 |
+| Weekend trip Pondicherry     | Miscellaneous  | 3999.63 |   0.9396984924623115 |
+| Notion Pro plan              | Bills          | 4045.40 |   0.9447236180904522 |
+| Hostel room rent             | Bills          | 4088.82 |    0.949748743718593 |
+| Smart meter top-up           | Bills          | 4139.02 |   0.9547738693467337 |
+| EB bill - hostel share       | Bills          | 4203.63 |   0.9597989949748744 |
+| Google One storage           | Bills          | 4524.86 |    0.964824120603015 |
+| Shared apartment  share      | Bills          | 4535.59 |   0.9698492462311558 |
+| Shared apartment share       | Bills          | 4539.18 |   0.9748743718592965 |
+| Shared apartment- share      | Bills          | 4795.88 |   0.9798994974874372 |
+| Airtel postpaid bill         | Bills          | 5143.58 |   0.9849246231155779 |
+| Electricity PG room          | Bills          | 5213.25 |   0.9899497487437185 |
+| Hostel room rent             | Bills          | 5243.69 |   0.9949748743718593 |
+| PG accommodation fee         | Bills          | 5667.90 |                    1 |
++------------------------------+----------------+---------+----------------------+
+200 rows in set (0.01 sec)
+
+mysql> select * from (select category, description, amount, avg(amount) over(partition by category) as category_mean, stdev(amount) over(partition by category) as category_stddev from student_budget) t where amount > category_mean + 2 * category_stddev;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'over(partition by category) as category_stddev from student_budget) t where amou' at line 1
+mysql> select * from (select category, description, amount, avg(amount) over(partition by category) as category_mean, stddev(amount) over(partition by category) as category_stddev from student_budget) t where amount > category_mean + 2 * category_stddev;
+Empty set (0.03 sec)
+
+mysql> select month, payment_method, total_amount, dense_rank() over(partition by month order by total_amount desc) as rank_in_month from (select month, payment_method, sum(amount) as total_amount from student_budget group by month, payment_method) t;
++----------+----------------+--------------+---------------+
+| month    | payment_method | total_amount | rank_in_month |
++----------+----------------+--------------+---------------+
+| April    | UPI            |     17570.87 |             1 |
+| April    | Debit Card     |     14385.11 |             2 |
+| April    | Cash           |      6546.72 |             3 |
+| April    | Credit Card    |      6031.58 |             4 |
+| April    | Net Banking    |      1927.39 |             5 |
+| February | UPI            |      8740.36 |             1 |
+| February | Net Banking    |      8670.95 |             2 |
+| February | Debit Card     |      8297.37 |             3 |
+| February | Credit Card    |      7516.55 |             4 |
+| February | Auto-debit     |      5213.25 |             5 |
+| February | Cash           |      4897.60 |             6 |
+| January  | UPI            |     17174.28 |             1 |
+| January  | Credit Card    |      7823.58 |             2 |
+| January  | Cash           |      4250.30 |             3 |
+| January  | Debit Card     |      3479.16 |             4 |
+| June     | Cash           |     14799.54 |             1 |
+| June     | Credit Card    |     10859.76 |             2 |
+| June     | Debit Card     |     10638.67 |             3 |
+| June     | Net Banking    |      8671.58 |             4 |
+| June     | UPI            |      6221.88 |             5 |
+| June     | Auto-debit     |       966.53 |             6 |
+| March    | Debit Card     |     15648.59 |             1 |
+| March    | Credit Card    |     13472.78 |             2 |
+| March    | UPI            |     12470.93 |             3 |
+| March    | Auto-debit     |      9759.19 |             4 |
+| March    | Net Banking    |      9422.94 |             5 |
+| March    | Cash           |      7708.57 |             6 |
+| May      | Debit Card     |     20509.57 |             1 |
+| May      | Net Banking    |     15611.49 |             2 |
+| May      | UPI            |      6317.34 |             3 |
+| May      | Cash           |      4955.34 |             4 |
+| May      | Credit Card    |      4889.27 |             5 |
++----------+----------------+--------------+---------------+
+32 rows in set (0.00 sec)
+
+mysql> select month, total_spend, avg(total_spend) over(order by field(month,'January','February','March','April','May','June') rows between 2 preceding and current row) as moving_average_3_months from (select month, sum(amount) as total_spends from student_budget group by month) t;
+ERROR 1054 (42S22): Unknown column 'total_spend' in 'field list'
+mysql> select month, total_spend, avg(total_spend) over(order by field(month,'January','February','March','April','May','June') rows between 2 preceding and current row) as moving_average_3_months from (select month, sum(amount) as total_spend from student_budget group by month) t;
++----------+-------------+-------------------------+
+| month    | total_spend | moving_average_3_months |
++----------+-------------+-------------------------+
+| January  |    32727.32 |            32727.320000 |
+| February |    43336.08 |            38031.700000 |
+| March    |    68483.00 |            48182.133333 |
+| April    |    46461.67 |            52760.250000 |
+| May      |    52283.01 |            55742.560000 |
+| June     |    52157.96 |            50300.880000 |
++----------+-------------+-------------------------+
+6 rows in set (0.00 sec)
+
+mysql> select category, sum(case when rn <= 3 then amount else 0 end) as top3_spend, sum(amount) as total_spend, (sum(case when rn <= 3 then amount else 0 end) / sum(amount)) * 100 as concentration_percentage from (select category, amount, row_number() over(partition by category order by amount desc) as rn from student_budget t group by category;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> select category, sum(case when rn <= 3 then amount else 0 end) as top3_spend, sum(amount) as total_spend, (sum(case when rn <= 3 then amount else 0 end) / sum(amount)) * 100 as concentration_percentage from (select category, amount, row_number() over(partition by category order by amount desc) as rn from student_budget ) t group by category;
++----------------+------------+-------------+--------------------------+
+| category       | top3_spend | total_spend | concentration_percentage |
++----------------+------------+-------------+--------------------------+
+| Bills          |   16124.84 |    95972.45 |                16.801530 |
+| Education      |    8770.75 |    32891.28 |                26.665882 |
+| Entertainment  |    4088.10 |    15289.76 |                26.737503 |
+| Food           |    2143.84 |     6060.60 |                35.373395 |
+| Healthcare     |    5709.83 |    25444.02 |                22.440754 |
+| Miscellaneous  |   11731.67 |    73543.25 |                15.952069 |
+| Shopping       |   10139.21 |    39483.87 |                25.679372 |
+| Transportation |    1705.52 |     6763.81 |                25.215374 |
++----------------+------------+-------------+--------------------------+
+8 rows in set (0.00 sec)
+
+mysql> select month, sum(amount) as total_spend, count(*) as transaction_count, avg(amount) as average_transaction_value, max(amount) as highest_transaction, (select payment_method from student_budget_s2 where s2.month=s1.month group by payment_method order by count(*) desc limit 1) as most_used_payment_method, (sum(amount)/(select sum(amount) from student_budget))*100 as percentage_of_6month_spend from student_budget s1 group by month order by field(month,'January','February','March','April','May','June');
+ERROR 1146 (42S02): Table 'excel_data.student_budget_s2' doesn't exist
+mysql> select month, sum(amount) as total_spend, count(*) as transaction_count, avg(amount) as average_transaction_value, max(amount) as highest_transaction, (select payment_method from student_budget s2 where s2.month=s1.month group by payment_method order by count(*) desc limit 1) as most_used_payment_method, (sum(amount)/(select sum(amount) from student_budget))*100 as percentage_of_6month_spend from student_budget s1 group by month order by field(month,'January','February','March','April','May','June');
++----------+-------------+-------------------+---------------------------+---------------------+--------------------------+----------------------------+
+| month    | total_spend | transaction_count | average_transaction_value | highest_transaction | most_used_payment_method | percentage_of_6month_spend |
++----------+-------------+-------------------+---------------------------+---------------------+--------------------------+----------------------------+
+| January  |    32727.32 |                33 |                991.736970 |             3888.11 | UPI                      |                  11.077145 |
+| February |    43336.08 |                33 |               1313.214545 |             5213.25 | UPI                      |                  14.667870 |
+| March    |    68483.00 |                33 |               2075.242424 |             5667.90 | Credit Card              |                  23.179293 |
+| April    |    46461.67 |                34 |               1366.519706 |             3697.17 | Debit Card               |                  15.725781 |
+| May      |    52283.01 |                34 |               1537.735588 |             5243.69 | Debit Card               |                  17.696118 |
+| June     |    52157.96 |                33 |               1580.544242 |             4524.86 | Cash                     |                  17.653792 |
++----------+-------------+-------------------+---------------------------+---------------------+--------------------------+----------------------------+
+6 rows in set (0.01 sec)
+
+mysql>
